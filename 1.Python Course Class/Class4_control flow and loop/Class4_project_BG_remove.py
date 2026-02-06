@@ -7,9 +7,14 @@
 
 from PIL import Image
 from rembg import remove
+from io import BytesIO
 
 imgFile=Image.open("pic.jpg")
 outputFile = remove(imgFile)
-outputFile.save("output.png")
+if isinstance(outputFile, Image.Image):
+	outputImage = outputFile
+else:
+	outputImage = Image.open(BytesIO(outputFile))
+outputImage.save("output.png")
 
 
