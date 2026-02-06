@@ -91,3 +91,123 @@ let multiLine = `This is line1
 This is line2
 This is line3`;
 console.log("\nMulti-line template literal:\n", multiLine);
+
+
+let str = "Hello World";
+
+// at()
+console.log("at():", str.at(1)); // e
+
+// charAt()
+console.log("charAt():", str.charAt(1)); // e
+
+// charCodeAt()
+console.log("charCodeAt():", str.charCodeAt(1)); // Unicode of 'e'
+
+// codePointAt()
+console.log("codePointAt():", str.codePointAt(1)); // Unicode value
+
+// concat()
+console.log("concat():", str.concat("!!!"));
+
+// constructor
+console.log("constructor:", str.constructor);
+
+// endsWith()
+console.log("endsWith():", str.endsWith("World"));
+
+// String.fromCharCode()
+console.log("fromCharCode():", String.fromCharCode(72, 105)); // Hi
+
+// includes()
+console.log("includes():", str.includes("Hello"));
+
+// indexOf()
+console.log("indexOf():", str.indexOf("o"));
+
+// isWellFormed()
+console.log("isWellFormed():", str.isWellFormed());
+
+// lastIndexOf()
+console.log("lastIndexOf():", str.lastIndexOf("o"));
+
+// length
+console.log("length:", str.length);
+
+// localeCompare()
+console.log("localeCompare():", "apple".localeCompare("banana"));
+
+// match()
+console.log("match():", str.match(/o/g));
+
+// matchAll()
+console.log("matchAll():", [...str.matchAll(/o/g)]);
+
+// padEnd()
+console.log("padEnd():", "5".padEnd(3, "0"));
+
+// padStart()
+console.log("padStart():", "5".padStart(3, "0"));
+
+// prototype (concept demo)
+String.prototype.sayHi = function () {
+  return "Hi " + this;
+};
+console.log("prototype:", "Tahrim".sayHi());
+
+// repeat()
+console.log("repeat():", "Hi ".repeat(3));
+
+// replace()
+console.log("replace():", str.replace("World", "JS"));
+
+// replaceAll()
+console.log("replaceAll():", "a-b-a-b".replaceAll("a", "x"));
+
+// search()
+console.log("search():", str.search("World"));
+
+// slice()
+console.log("slice():", str.slice(0, 5));
+
+// split()
+console.log("split():", str.split(" "));
+
+// startsWith()
+console.log("startsWith():", str.startsWith("Hello"));
+
+// substr() (deprecated)
+console.log("substr():", str.substr(0, 5));
+
+// substring()
+console.log("substring():", str.substring(0, 5));
+
+// toLocaleLowerCase()
+console.log("toLocaleLowerCase():", str.toLocaleLowerCase());
+
+// toLocaleUpperCase()
+console.log("toLocaleUpperCase():", str.toLocaleUpperCase());
+
+// toLowerCase()
+console.log("toLowerCase():", str.toLowerCase());
+
+// toString()
+console.log("toString():", str.toString());
+
+// toUpperCase()
+console.log("toUpperCase():", str.toUpperCase());
+
+// toWellFormed()
+console.log("toWellFormed():", str.toWellFormed());
+
+// trim()
+console.log("trim():", "   Hello   ".trim());
+
+// trimEnd()
+console.log("trimEnd():", "   Hello   ".trimEnd());
+
+// trimStart()
+console.log("trimStart():", "   Hello   ".trimStart());
+
+// valueOf()
+console.log("valueOf():", str.valueOf());
