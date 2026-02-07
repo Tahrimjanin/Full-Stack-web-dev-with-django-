@@ -1,4 +1,4 @@
--- Active: 1769617333358@@127.0.0.1@3306@practice
+-- Active: 1770224516812@@127.0.0.1@3306@mysql
 -- veriable declaration by SET ,";" means end
 SET @num1= 20; 
 SET @num2= 6;
