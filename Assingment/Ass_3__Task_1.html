@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker </title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080b12; --panel: #0e1420; --card: #121929; --border: #1e2d45;
+      --cyan: #00e5ff; --lime: #b8ff57; --red: #ff4757; --text: #e8f0fe; --sub: #5a7090;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 740px; margin: 0 auto; }
+    h1 { font-size: 1.95rem; font-weight: 700; letter-spacing: -0.03em; }
+    h1 span { color: var(--cyan); }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(0,229,255,0.05);
+    }
+
+    .total-hero {
+      background: linear-gradient(135deg, #0a1628, #0e1f3a);
+      padding: 2.6rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .total-amount { font-size: 3.6rem; font-weight: 700; color: var(--lime); }
+    .total-count { font-size: 1.1rem; color: var(--sub); margin-top: 0.6rem; }
+
+    .input-zone {
+      padding: 2rem;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+    }
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    input, select {
+      padding: 1rem 1.15rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #1a2233;
+      color: var(--text);
+      font-size: 0.98rem;
+    }
+    input:focus, select:focus { 
+      border-color: var(--cyan); 
+      outline: none; 
+      box-shadow: 0 0 0 3px rgba(0,229,255,0.15); 
+    }
+    .btn-add { 
+      background: var(--cyan); 
+      color: #000; 
+      font-weight: 700; 
+      cursor: pointer; 
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.05rem;
+    }
+    .btn-add:hover { opacity: 0.94; transform: translateY(-1px); }
+
+    .controls {
+      padding: 1.4rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: rgba(0,0,0,0.15);
+    }
+    .search-box { flex: 1; min-width: 250px; }
+
+    .summary {
+      padding: 1.4rem 2rem;
+      font-size: 0.95rem;
+      color: var(--sub);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: rgba(0,0,0,0.2);
+    }
+
+    .chart-container {
+      padding: 2rem;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .list-area { padding: 2rem; }
+    .expense-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1a2233;
+      padding: 1.25rem 1.4rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+    }
+    .expense-item:hover { border-color: var(--cyan); }
+    .item-desc { font-weight: 500; font-size: 1.05rem; }
+    .item-meta { font-size: 0.83rem; color: var(--sub); margin-top: 4px; }
+    .item-amount { 
+      font-family: 'DM Mono', monospace; 
+      font-size: 1.22rem; 
+      font-weight: 600; 
+      color: var(--lime); 
+    }
+    .actions button {
+      background: none;
+      border: none;
+      font-size: 1.35rem;
+      margin-left: 12px;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+    .actions button:hover { background: rgba(255,71,87,0.2); color: var(--red); }
+
+    .toast {
+      position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+      background: #1f0a0a; border: 1px solid var(--red); color: #ff8a8a;
+      padding: 1rem 1.8rem; border-radius: 12px; font-size: 0.93rem;
+      opacity: 0; transition: all 0.4s; z-index: 9999;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(-15px); }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Expense <span>Tracker</span></h1><br>
+
+  <div class="card">
+    <div class="total-hero">
+      <div style="font-size:0.9rem; color:var(--sub);">TOTAL EXPENSES</div>
+      <div class="total-amount" id="totalAmount">৳ 0.00</div>
+      <div class="total-count" id="expenseCount">0 expenses recorded</div>
+    </div>
+
+    <div class="input-zone">
+      <div class="input-row">
+        <input type="number" id="amountInput" placeholder="Amount (e.g. 650)" step="0.01">
+        <input type="text" id="descInput" placeholder="Description (e.g. Chicken Biryani)">
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr auto; gap: 1rem; align-items: center;">
+        
+        <select id="categoryInput" title="Select Expense Category">
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Health">Health</option>
+          <option value="Others">Others</option>
+        </select>
+        <input type="date" id="dateInput">
+        <button class="btn-add" onclick="addExpense()">+ Add Expense</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="searchInput" class="search-box" placeholder="Search description..." onkeyup="renderList()">
+      <select id="filterCategory" onchange="renderList()">
+        <option value="">All Categories</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Health">Health</option>
+        <option value="Others">Others</option>
+      </select>
+      <button onclick="exportToCSV()" style="padding:1rem 1.4rem; background:#1e2d45; color:var(--cyan);">Export CSV</button>
+      <button onclick="clearAllData()" style="padding:1rem 1.4rem; background:#1e2d45; color:var(--red);">Clear All</button>
+    </div>
+
+    <div class="summary" id="summary"></div>
+
+    <div class="chart-container">
+      <canvas id="pieChart" height="240"></canvas>
+    </div>
+
+    <div class="list-area">
+      <div id="expenseList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  let expenses = [];
+  let pieChartInstance = null;
+
+  const catIcons = {
+    Food: '🍔', Transport: '🚕', Shopping: '🛒', Bills: '⚡',
+    Entertainment: '🎬', Health: '💊', Others: '📦'
+  };
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2800);
+  }
+
+  function loadData() {
+    const saved = localStorage.getItem('batch13_expenses');
+    if (saved) expenses = JSON.parse(saved);
+  }
+
+  function saveData() {
+    localStorage.setItem('batch13_expenses', JSON.stringify(expenses));
+  }
+
+  function calculateTotal() {
+    return expenses.reduce((sum, item) => sum + parseFloat(item.amount || 0), 0);
+  }
+
+  function getThisMonthTotal() {
+    const now = new Date();
+    return expenses.filter(item => {
+      const d = new Date(item.date);
+      return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+    }).reduce((sum, item) => sum + parseFloat(item.amount || 0), 0);
+  }
+
+  function updateTotal() {
+    const total = calculateTotal();
+    document.getElementById('totalAmount').textContent = `৳ ${total.toFixed(2)}`;
+    document.getElementById('expenseCount').textContent = `${expenses.length} expenses recorded`;
+  }
+
+  function updateSummary() {
+    const thisMonth = getThisMonthTotal();
+    const avg = thisMonth > 0 ? (thisMonth / 30).toFixed(0) : 0;
+    const highest = expenses.length ? Math.max(...expenses.map(e => e.amount)) : 0;
+
+    document.getElementById('summary').innerHTML = `
+      This Month: <strong>৳ ${thisMonth.toFixed(2)}</strong> • 
+      Avg/Day: <strong>৳ ${avg}</strong> • 
+      Highest: <strong>৳ ${highest.toFixed(2)}</strong>
+    `;
+  }
+
+  function renderList() {
+    const container = document.getElementById('expenseList');
+    const search = document.getElementById('searchInput').value.toLowerCase().trim();
+    const catFilter = document.getElementById('filterCategory').value;
+
+    let filtered = expenses.filter(exp => {
+      const matchSearch = !search || exp.description.toLowerCase().includes(search);
+      const matchCat = !catFilter || exp.category === catFilter;
+      return matchSearch && matchCat;
+    });
+
+    container.innerHTML = '';
+
+    if (filtered.length === 0) {
+      container.innerHTML = `<div style="text-align:center; padding:4rem 1rem; color:var(--sub);">No expenses found</div>`;
+      return;
+    }
+
+    filtered.forEach((exp) => {
+      const index = expenses.indexOf(exp);
+      container.innerHTML += `
+        <div class="expense-item">
+          <div>
+            <div class="item-desc">${catIcons[exp.category]} ${exp.description}</div>
+            <div class="item-meta">${exp.category} • ${exp.date}</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="item-amount">৳ ${parseFloat(exp.amount).toFixed(2)}</div>
+            <div class="actions">
+              <button onclick="editExpense(${index})">✏️</button>
+              <button onclick="deleteExpense(${index})">✕</button>
+            </div>
+          </div>
+        </div>`;
+    });
+  }
+
+  function updatePieChart() {
+    if (pieChartInstance) pieChartInstance.destroy();
+
+    const catTotal = {};
+    expenses.forEach(exp => {
+      catTotal[exp.category] = (catTotal[exp.category] || 0) + parseFloat(exp.amount);
+    });
+
+    pieChartInstance = new Chart(document.getElementById('pieChart'), {
+      type: 'doughnut',
+      data: {
+        labels: Object.keys(catTotal),
+        datasets: [{
+          data: Object.values(catTotal),
+          backgroundColor: ['#00e5ff','#b8ff57','#ff4757','#8b5cf6','#ffa502','#2ed573','#1e90ff']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: 'bottom', labels: { color: '#e8f0fe', padding: 20 } } }
+      }
+    });
+  }
+
+  function addExpense() {
+    const amount = document.getElementById('amountInput').value.trim();
+    const desc = document.getElementById('descInput').value.trim();
+    const category = document.getElementById('categoryInput').value;
+    let date = document.getElementById('dateInput').value || new Date().toISOString().split('T')[0];
+
+    if (!amount || parseFloat(amount) <= 0) return showToast("Please enter a valid amount!");
+    if (!desc) return showToast("Please enter a description!");
+
+    expenses.unshift({
+      amount: parseFloat(amount),
+      description: desc,
+      category: category,
+      date: date
+    });
+
+    saveData();
+    clearInputs();
+    refreshAll();
+    showToast("✅ Expense added successfully");
+  }
+
+  function deleteExpense(index) {
+    if (confirm("Delete this expense?")) {
+      expenses.splice(index, 1);
+      saveData();
+      refreshAll();
+    }
+  }
+
+  function editExpense(index) {
+    const exp = expenses[index];
+    document.getElementById('amountInput').value = exp.amount;
+    document.getElementById('descInput').value = exp.description;
+    document.getElementById('categoryInput').value = exp.category;
+    document.getElementById('dateInput').value = exp.date;
+
+    deleteExpense(index);
+    showToast("Edit fields and click Add Expense");
+  }
+
+  function clearInputs() {
+    document.getElementById('amountInput').value = '';
+    document.getElementById('descInput').value = '';
+  }
+
+  function refreshAll() {
+    updateTotal();
+    updateSummary();
+    renderList();
+    updatePieChart();
+  }
+
+  function exportToCSV() {
+    if (!expenses.length) return showToast("No data to export!");
+    let csv = "Date,Description,Category,Amount\n";
+    expenses.forEach(e => {
+      csv += `${e.date},"${e.description.replace(/"/g,'""')}","${e.category}",${e.amount}\n`;
+    });
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `expenses_${new Date().toISOString().slice(0,10)}.csv`;
+    link.click();
+    showToast("CSV downloaded!");
+  }
+
+  function clearAllData() {
+    if (confirm("Delete ALL expenses?")) {
+      expenses = [];
+      saveData();
+      refreshAll();
+      showToast("All data cleared");
+    }
+  }
+
+  // Initialize
+  loadData();
+  document.getElementById('dateInput').value = new Date().toISOString().split('T')[0];
+  refreshAll();
+</script>
+</body>
+</html>
