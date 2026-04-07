@@ -63,4 +63,47 @@ console.log("Voting Eligibility:", (age >= 18) ? "Can vote" : "Cannot vote"); //
 // You can also nest ternary (less readable though)
 let score = 85;
 let grade = (score >= 90) ? "A" : (score >= 75) ? "B" : (score >= 50) ? "C" : "F";
-console.log("Grade:", grade); 
+console.log("Grade:", grade); console.log(car);
+
+
+
+
+
+
+
+
+/// method form w3schools
+
+//two dimensional array
+let persons = [
+  ["John", "Doe", 30],
+  ["Jane", "Smith", 25],
+  ["Bob", "Johnson", 35]
+];
+
+console.log(persons[0][0]); //  "John" show korbe
+console.log(persons[1][1]); // "Smith" show korbe
+console.log(persons[2][2]); // 35 show korbe
+
+
+//person[row]
+
+for (let row = 0; row < persons.length; row++) {
+  console.log("Person " + (row + 1) + ":");
+  for (let col = 0; col < persons[row].length; col++) {
+    console.log(persons[row][col]);
+  }
+}
+
+
+let n1 = [10] ;
+let n2 = [10] ;
+
+console.log(n1 == n2 ); // false cause n1 and n2 are different array objects
+console.log(n1 === n2); // false
+
+let n3 = 10 ;
+let n4 = 10 ;
+
+console.log(n3 == n4); // true cause n3 and n4 are primitive values
+console.log(n3 === n4); // true
