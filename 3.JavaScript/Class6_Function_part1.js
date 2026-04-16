@@ -1,8 +1,83 @@
+//function reusability, modularity, and organization in JavaScript. 
+
+//"""has parameter no return"""
+function sayhello(name){
+    console.log("Hello" + name );
+    num = 10 ; // accidental global variable cause it is not declared with var, let, or const
+}
+sayhello("Tahrim"); // calling the function to execute the code inside it
+sayhello("Janin"); // calling the function again with a different argument
+//argument is the value we pass to the function when we call it, and parameter is the variable that receives the value inside the function
+
+
+// JavaScript Hoisting == js code execution ar age full code scan kore kore declar valuer jonno memory create kora suru kore then code execute kore 
+console.log(num2); // undefined
+  let num2 = 20; 
+
+
+if(true){
+  var num = 10 ; 
+  console.log(num);  
+
+}console .log(num); // var is function-scoped, so it is accessible outside the block
+
+//""no parameter has return"""
+function getNumber() {
+  return 100;}
+let num = getNumber();
+console.log(num); // 100
+
+
+///"""no parameter no return"""
+function sayHi() {
+  console.log("Hi!");}
+sayHi(); // Hi!
+
+
+// function expression is a function that is assigned to a variable. It can be anonymous or named. It is not hoisted, so it cannot be called before it is defined.
+// (anonymous function assigned to a variable)
+const greet = function(name) {
+  return "Hello " + name;
+};
+console.log(greet("Tahrim")); // Hello Tahrim
+
+
+
+let hello = function(){
+  console.log("Hello World");
+} ;
+let hello2 = sayhello();
+let hello3 = sayHi;
+
+sayhello(); // Hello Tahrim
+sayhello(); // Hello Janin
+sayHi(); // Hi!
+
+
 // 1. Function Declaration
+
+// """has parameter has return"""""
 function add(a, b) {
   return a + b;
 }
 console.log("Declaration:", add(2, 3));
+console.log("Declaration with default:", add());
+
+function add(n1, n2){
+  if(!undefined) n1 = 0;
+  if(!undefined) n2 = 0;
+  return n1 + n2;
+}
+ //or 
+ function add(n1, n2){
+ n1 = n1 ? n1 : 0; //or n1 = n1 ?? 0;
+ n2 = n2 ? n2 : 0;// or n2 = n2 ?? 0;
+  return n1 + n2; }
+
+//or
+ function add(n1 =0 , n2 = 0){
+   return n1 + n2; }
+
 
 
 // 2. Function with Return

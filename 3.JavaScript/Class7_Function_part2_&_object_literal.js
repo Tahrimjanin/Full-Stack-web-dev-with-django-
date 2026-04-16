@@ -1,3 +1,21 @@
+// call back function - this is a function that is passed as an argument to another function and is executed after some operation is completed. 
+// It allows us to handle asynchronous operations and manage the flow of our code effectively.
+function sayhello(){
+  console.log("Hello World");
+}
+function callSayhello(func){
+  func();
+}
+callSayhello(sayhello); // Hello World
+// another example of callback function
+ const btn = document.querySelector("button");
+  btn.addEventListener("click", () => {
+  } ); // this is a callback function that will be executed when the button is clicked
+
+//JavaScript Invocation mane holo func run kora
+
+
+
 // 1. Object Creation (Object Literal)
 const person = {
   firstName: "Tahrim",
