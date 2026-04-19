@@ -13,8 +13,59 @@ callSayhello(sayhello); // Hello World
   } ); // this is a callback function that will be executed when the button is clicked
 
 //JavaScript Invocation mane holo func run kora
+//anonimous function mane holo nam na thaka function
 
 
+function add(a,b){
+  return a+b ;
+}
+function anotherFunc(){
+  return add(5,10);
+}
+console.log(anotherFunc()); // 15
+
+
+//rest parameter mane holo function er parameter gulo ke array akare receive kora
+ function add(...numbers) {
+  let result = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    result += numbers[i];
+  } return result;
+}
+console.log(add(1, 2, 3, 4)); //10
+
+
+ // more example of rest parameter
+let arr = [1, 2, 3, 4];
+//let newArr = [] ; for full array
+let newArr =[...arr]; // with spread operator
+for (let i = 0; i < arr.length; i++) {
+  newArr.push(arr[i]);
+  //withour push --> newArr[i] = arr[i];
+}
+console.log(newArr); // [1, 2, 3, 4]
+
+
+//object Literal - object create korar ekta syntax jekhane amra key-value pair diye object create kori.
+//key-value pair mane holo object er property name (key) and tar corresponding value. Object literal syntax diye amra easily object create korte pari.
+
+let Person = {
+  name: "Tahrim",
+  age: 22,
+  country : "Bangladesh",
+  sayHello : function() { //function is a method
+      console.log("Hello, I am " + this.name);
+  } ,
+} ;
+
+for(let el in person ){
+  if(typeof person[el] !='function'){
+    console.log(person[el]);
+  } else {
+    person[el]();
+  }
+}
 
 // 1. Object Creation (Object Literal)
 const person = {
@@ -126,7 +177,7 @@ console.log("hasOwnProperty:", user.hasOwnProperty("name"));
 
 
 // 16. Convert Object to Array
-const arr = Object.entries(person);
+const objectEntries = Object.entries(person);
 console.log("Object to Array:", arr);
 
 
