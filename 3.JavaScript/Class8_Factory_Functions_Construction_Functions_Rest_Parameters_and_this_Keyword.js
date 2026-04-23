@@ -58,5 +58,34 @@ class CreatePhone {
 }
 
 let phone4 = new CreatePhone("Apple", "iPhone 17 Pro", 235000, true);
-
 console.log(phone4);
+
+//////this keyword
+let person ={
+    name :'janin',
+    interest : ['coding', '3D modeling', 'Booking'],
+    addr : 'Bogura',
+
+    SayHello(){
+        console.log("Hello, my name is " + this.name);
+    },
+
+    // printInterests: function (){
+    //   this.interest.forEach(function(el){
+    //     console.log(el);
+    //   }) ;
+    //} , or easy way
+    
+    printInterests: function (){
+        this.interest.forEach(el => {
+            console.log(this.name + " likes " + el);
+        }) ;
+    },
+} ;
+person.SayHello();
+person.printInterests();
+
+//this keyword use hoe dui jaegae _ 
+// Function - global korle setate bole window
+// method -this -> sei object kei refer korbe
+
