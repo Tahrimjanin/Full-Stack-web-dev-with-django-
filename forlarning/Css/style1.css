@@ -1,0 +1,248 @@
+h3{ 
+    color : red ;
+   
+}
+h1{
+    color : blue ;
+    background-color: yellow ;
+    /* for font style */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-style: oblique;
+    font-size: x-large;
+    font-size :5vw ; /*small large into device*/
+
+    /*in line block element*/
+    text-align: center;
+    display : inline-block ;
+
+}
+span{
+    /* for in line block element*/
+    text-align: center;
+    display : inline-block ;
+}
+body{
+    background: black;
+    background-image:url(g2.jpg) ;
+   /* background-repeat: no-repeat; */
+}
+p{
+    color: white
+    
+}
+.p1{ /* . for class selection*/
+    /*for border */
+    border-width:5px ;
+    border-style: solid;
+    border-color: rgb(206, 196, 255);
+    border-radius: 25px ;
+
+    /* for google font css part */
+    .playwrite-au-vic-guides-regular {
+        font-family: "Playwrite AU VIC Guides", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+} 
+#p2{
+   border: 5px solid ; /* for short */
+   border-radius:  15px ;
+}
+.jeny{
+    width: 50 px ;
+    height : 50px ;
+    background-color :palevioletred ;
+    border : 5px solid white ;
+    margin-top: 50px ;
+    margin-left: 70px;
+    margin-right:70px ; 
+    /* or */
+    margin : 50px 70px ;
+    /* for auto upto size*/
+    margin :auto ;
+
+    /*for padding*/
+   padding-top :20px ;
+   padding-left: 20px ;
+   padding-bottom: 50px ;
+   padding-right: 50px;
+
+   padding : 50px ,30px,80px,90px ;
+
+   outline-width :10px;
+   outline-style : solid ;
+   outline-color :green;
+   outline-offset: 10px;
+}
+h4{
+    color : white ;
+    background-color: black;
+    text-align: center ;
+    text-transform: uppercase;
+    text-indent: 200px ;
+    letter-spacing: 5px;
+    word-spacing: 20px;
+    line-height: 40px;
+
+}
+.fa-brands{
+    font-size : 50 px;
+    color:whitesmoke ;
+}
+a{
+    text-decoration: none;
+    text-decoration: none;
+    background-color: red;
+    font-size: 100px ;
+
+
+}
+a:hover{
+    color : white ;
+    background : black ;
+}
+a:active{
+    color : yellow ; 
+}
+a:visited{
+    color : tomato ;
+}
+
+ul{
+    color:aqua ;
+    list-style-type: decimal-leading-zero;
+    list-style-position: inside;
+    /*if select image*/
+    
+    /* or*/
+    list-style: square inside  ;
+}
+ul li{
+    /*list in line element */
+    display: inline ;
+}
+table ,th,td{
+    border : 5px solid red ;
+    border-collapse: collapse;
+    text align : left ;
+}
+table{
+   
+    width : 50% ;
+}
+th ,td{
+    color : rgb(6, 87, 6) ;
+}
+.J1{
+    border:3px solid red;
+    width: 400px;
+    margin: auto ;
+}
+.J2{
+    border :3px solid green;
+    max-width: 400px; 
+    margin: auto ;
+   /*max-width and  width :if use max-width that time element showing depend on display size*/
+}
+.J3{
+    width :400px;
+    height: 200px;
+    border :5px solid black;
+    overflow :scroll ;/*if i dont use overflow -writing part overflow the box*/
+}
+
+.box1{
+    width :300px;
+    height: 200px;
+    background-color:  rgb(3, 106, 3);
+    position : relative ;
+
+    /*
+    bottom: 0 ;
+    left :0;
+    top:0;
+    margin : auto;
+    left:0;
+    */
+}
+.box2 {
+    width :100px;
+    height: 100px;
+    background-color: darkred;
+    bottom: 0 ;
+    right :0 ;
+    left :0;
+    top:0;
+    margin : auto;
+    position: absolute ;
+    border-radius: 50%;
+
+}
+.name{
+    border : 5px solid yellowgreen ;
+    margin-top; 10px;
+    width: 400px;
+    background-color :white;
+    /*kono lekha atkiye niche scroll korar jonno*/
+    position : sticky ;
+    top :  0;
+}
+.K{
+    /*more scroll / under space */
+    padding-bottom : 100px ;
+}
+.pp{
+    position : fixed ;
+    bottom : 0;
+    right : 0;
+}
+.img{
+    width:200px;
+    float : right ;
+}
+.IMG{
+    clear : both ;
+}
+.img2{
+    width:200px;
+    float : left ;
+}
+div{
+    float : left ;
+}
+.q1{
+    width :100px;
+    height : 200px ;
+    background-color: black;
+}
+.q2{
+    width :100px;
+    height : 200px ;
+    background-color: red;
+}
+.q3{
+    width :100px;
+    height : 200px ;
+    background-color: tomato ;
+}
+.q4{
+    width :100px;
+    height : 200px ;
+    background-color: greenyellow;
+}
+.pseudo:hover{
+    color: rgb(0, 0, 2);
+    background-color: whitesmoke;
+    
+}
+h6:nth-child(3) {
+    color: green;
+}
+p::first-letter{
+    color:red;
+   font-size: 50px; 
+}
+h3::before{
+    content :url(star..png)
+}

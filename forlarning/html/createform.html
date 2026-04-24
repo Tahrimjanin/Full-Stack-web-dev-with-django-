@@ -1,0 +1,63 @@
+<!--creat a form-->
+
+<h1 style="text-align: center">Sign Up form</h1>
+<hr><!--for underline-->
+<br>
+<lebel for="user">Name:</lebel> <!--for selection-->
+<input type="text" id="user" name="user" placeholder="User Name"> <br>
+
+<lebel for="mail">Email:</lebel>
+<input type="mail" id="mail" name="usermail" placeholder="Useremail" required> <br>
+
+<lebel for="password">Password:</lebel>
+<input type="password" id="password" name="password" placeholder="*******" required> <br>
+
+<lebel for="phn">Phone:</lebel> 
+<select name="Code">
+    <option value="+880">+880</option>
+    <option value="+990">+990</option>
+    <option value="+110">+110</option>
+</select>
+<input type="number" id="Phn" name="phone" placeholder="123456789" required> <br>
+
+<lebel for="Country">Country:</lebel>
+<input list="con">
+<datalist id="con"> 
+    <option value="Bangladesh"></option>
+    <option value="India"></option>
+    <option value="canada"></option>
+</datalist> <br> 
+
+Gender:
+<input type="radio" id="gnd1" name="gender">
+<label for="gnd1">Male</label>
+<input type="radio" id="gnd2" name="gender">
+<label for="gnd2">Female</label> <br>
+
+<label for="date">Date of birth:</label>
+<input type="date" id="date" name="Date"><br>
+
+<label for="time">Time:</label>
+<input type="time" id="time" name="time"><br>
+
+<label for="Color">Colors:</label>
+<input type="Color" id="Color" name="Col"><br>
+
+<label for="File">File:</label>
+<input type="File" id="File" name="fil"><br>
+
+<input type="checkbox" id="vehiclel" name="vec">
+<label for="vehiclel">I have a Bike</label>
+<input type="checkbox" id="vehicle2" name="vec">
+<label for="vehicle2">I have a bicycle</label><br>
+
+<textarea for="Comment"cols="30" rows="10">comment here</textarea><br>
+
+<input type="submit" value="Send">
+<input type="reset" value="reset"> <br>
+
+<marquee>The end of form</marquee>
+
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Tree Visualizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        input {
+            padding: 12px 20px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 150px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #764ba2;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 600;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #canvas {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+            background: #fafafa;
+        }
+
+        .info {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌳 Binary Tree Visualizer</h1>
+        
+        <div class="controls">
+            <input type="number" id="nodeValue" placeholder="Enter value" />
+            <button onclick="insertNode()">Insert Node</button>
+            <button onclick="deleteNode()">Delete Node</button>
+            <button onclick="clearTree()">Clear Tree</button>
+            <button onclick="createRandomTree()">Random Tree</button>
+        </div>
+
+        <canvas id="canvas" width="1100" height="600"></canvas>
+        
+        <div class="info">
+            Click on nodes to highlight them | Enter values and click Insert to add nodes
+        </div>
+    </div>
+
+    <script>
+        class TreeNode {
+            constructor(value) {
+                this.value = value;
+                this.left = null;
+                this.right = null;
+                this.x = 0;
+                this.y = 0;
+            }
+        }
+
+        class BinaryTree {
+            constructor() {
+                this.root = null;
+            }
+
+            insert(value) {
+                const newNode = new TreeNode(value);
+                if (!this.root) {
+                    this.root = newNode;
+                    return;
+                }
+
+                let current = this.root;
+                while (true) {
+                    if (value < current.value) {
+                        if (!current.left) {
+                            current.left = newNode;
+                            return;
+                        }
+                        current = current.left;
+                    } else {
+                        if (!current.right) {
+                            current.right = newNode;
+                            return;
+                        }
+                        current = current.right;
+                    }
+                }
+            }
+
+            delete(value) {
+                this.root = this.deleteNode(this.root, value);
+            }
+
+            deleteNode(node, value) {
+                if (!node) return null;
+
+                if (value < node.value) {
+                    node.left = this.deleteNode(node.left, value);
+                } else if (value > node.value) {
+                    node.right = this.deleteNode(node.right, value);
+                } else {
+                    if (!node.left && !node.right) return null;
+                    if (!node.left) return node.right;
+                    if (!node.right) return node.left;
+
+                    let minRight = node.right;
+                    while (minRight.left) {
+                        minRight = minRight.left;
+                    }
+                    node.value = minRight.value;
+                    node.right = this.deleteNode(node.right, minRight.value);
+                }
+                return node;
+            }
+        }
+
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const tree = new BinaryTree();
+        let selectedNode = null;
+
+        function calculatePositions(node, x, y, xOffset) {
+            if (!node) return;
+            
+            node.x = x;
+            node.y = y;
+            
+            if (node.left) {
+                calculatePositions(node.left, x - xOffset, y + 80, xOffset / 2);
+            }
+            if (node.right) {
+                calculatePositions(node.right, x + xOffset, y + 80, xOffset / 2);
+            }
+        }
+
+        function drawTree() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            if (!tree.root) {
+                ctx.font = '20px Arial';
+                ctx.fillStyle = '#999';
+                ctx.textAlign = 'center';
+                ctx.fillText('Tree is empty. Add nodes to visualize!', canvas.width / 2, canvas.height / 2);
+                return;
+            }
+
+            calculatePositions(tree.root, canvas.width / 2, 50, 200);
+            drawNode(tree.root);
+        }
+
+        function drawNode(node) {
+            if (!node) return;
+
+            // Draw lines to children first
+            ctx.strokeStyle = '#667eea';
+            ctx.lineWidth = 2;
+
+            if (node.left) {
+                ctx.beginPath();
+                ctx.moveTo(node.x, node.y);
+                ctx.lineTo(node.left.x, node.left.y);
+                ctx.stroke();
+                drawNode(node.left);
+            }
+
+            if (node.right) {
+                ctx.beginPath();
+                ctx.moveTo(node.x, node.y);
+                ctx.lineTo(node.right.x, node.right.y);
+                ctx.stroke();
+                drawNode(node.right);
+            }
+
+            // Draw node circle
+            ctx.beginPath();
+            ctx.arc(node.x, node.y, 25, 0, Math.PI * 2);
+            
+            if (selectedNode === node) {
+                ctx.fillStyle = '#ffd700';
+            } else {
+                ctx.fillStyle = '#667eea';
+            }
+            ctx.fill();
+            ctx.strokeStyle = '#764ba2';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            // Draw node value
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(node.value, node.x, node.y);
+        }
+
+        function insertNode() {
+            const input = document.getElementById('nodeValue');
+            const value = parseInt(input.value);
+            
+            if (isNaN(value)) {
+                alert('Please enter a valid number');
+                return;
+            }
+
+            tree.insert(value);
+            input.value = '';
+            drawTree();
+        }
+
+        function deleteNode() {
+            const input = document.getElementById('nodeValue');
+            const value = parseInt(input.value);
+            
+            if (isNaN(value)) {
+                alert('Please enter a valid number');
+                return;
+            }
+
+            tree.delete(value);
+            input.value = '';
+            selectedNode = null;
+            drawTree();
+        }
+
+        function clearTree() {
+            tree.root = null;
+            selectedNode = null;
+            drawTree();
+        }
+
+        function createRandomTree() {
+            clearTree();
+            const values = [];
+            for (let i = 0; i < 10; i++) {
+                values.push(Math.floor(Math.random() * 100));
+            }
+            values.forEach(val => tree.insert(val));
+            drawTree();
+        }
+
+        function findNodeAt(node, x, y) {
+            if (!node) return null;
+            
+            const dist = Math.sqrt((node.x - x) ** 2 + (node.y - y) ** 2);
+            if (dist <= 25) return node;
+            
+            const leftResult = findNodeAt(node.left, x, y);
+            if (leftResult) return leftResult;
+            
+            return findNodeAt(node.right, x, y);
+        }
+
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            selectedNode = findNodeAt(tree.root, x, y);
+            drawTree();
+        });
+
+        document.getElementById('nodeValue').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                insertNode();
+            }
+        });
+
+        // Initialize with a sample tree
+        [50, 30, 70, 20, 40, 60, 80].forEach(val => tree.insert(val));
+        drawTree();
+    </script>
+</body>
+</html>

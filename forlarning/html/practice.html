@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice html</title>
+<link rel="stylesheet" href="https://link.com/">
+    <base href="https://www.google.com" target="_blank"> <!--use for url(defont url)-->
+
+</head>
+<body>
+
+    <a href="https://www.google.com"></a> <!-- a(anchor)= hyerlink -->
+
+    <p> <abbr title="world health organigation">WHO</abbr>  </p><!--p=paragraph tag/abbr=abbribiation-->
+
+    <address>
+        Contact me at: <a href="janintahrim@gmail.com">janintahrim@gmail.com</a>
+    </address> <!--display contact info-->
+    
+    <!--area tag for image map-->
+    <img src="pic.jpg" usemap="#image-map" width="100" height="60">
+    <map name="image-map">
+        <area shape="rect" coords="100,100,300,250" href="https://www.google.com" alt="Google">
+    </map>
+
+    <article><!--for indepandent artical-->
+        <h3>NEWS artical</h3> <!--heading tag-->
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur explicabo dolores animi dolore inventore atque provident recusandae itaque quisquam nemo?</p>
+    </article>
+
+    <main>
+        
+    </main>
+
+    <aside> <!--represent side content-->
+        <h3>Read more:</h3>
+        <ul>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Food</a></li>
+        </ul>
+    </aside>
+
+    
+    <ul><!-- Unordered List -->
+        <li>Fruits
+            <!-- Ordered List Inside Unordered List -->
+            <ol><!-- Ordered List -->
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Oranges</li>
+            </ol>
+        </li> <!--list item-->
+        <li>Vegetables
+            <!-- Ordered List Inside Unordered List -->
+            <ol>
+                <li>Carrots</li>
+                <li>Broccoli</li>
+                <li>Spinach</li>
+            </ol>
+        </li>
+    </ul>
+
+ <!--forr audio-->
+ <audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+        <!--different writing deraction( Bi-Directional)-->
+       <p>username: <bdi>مرحبا</bdi></p>
+ 
+       <!--( Bi-Directional Override)-->
+        <p> <bdo dir="rtl">programmer </bdo></p>
+
+        <blockquote>Lorem ipsum dolor sit amet.</blockquote> <!--block level content-->
+ 
+
+     <p>this is  <b> bold</b></p> <!--bold-->
+
+    <p> <cite>Gitanjoli</cite> written by Robindronath thakur</p> <!--cite for poet/book/artical/movie refarence-->
+
+    <style>  
+        body { background-color: #acacfd; font-family: Arial, sans-serif; }
+        p { color: #555; font-size: 18px; }
+    </style><!--internal css-->
+
+    <button onclick="alert('Button Clicked!')">Click me </button> <!--for create a button--> <br>
+
+    <!--Used for drawing graphics  Js-->
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas> <br>
+ 
+     <caption>STUDENT NAME ANDRESS</caption> <!--caption tag for table-->
+
+    <p> run c++ code</p> <!--inline code -->
+    <pre></pre><code> 
+    #include <iostream>
+        using namespace std;
+        int main() {
+            cout << "Hello, World!" << endl;
+            return 0;
+        }
+    </code></pre>
+
+    <!--data tag = a machine-readable format-->
+    <p>price: <data value="250.79">$250.79</data></p>
+ 
+
+ <label for="browser">Choose a browser:</label><!--labale tag for form input-->
+    <input list="browsers" id="browser" name="browser">
+
+    <datalist id="browsers">  <!--datalist= predefine option-->
+        <option value="Chrome"></option>
+        <option value="Firefox"></option>
+        <option value="Edge"></option>
+    </datalist>
+
+    <figure><!--for images, diagrams, or illustrations with captions-->
+        <img src="pic.jpg" alt="Landscape">
+        <figcaption>A stunning mountain view.</figcaption>
+        <!--figcaption tag provides a caption for a figure-->
+    </figure>
+
+
+    
+
+     <!--dl(D.list)/dt(define term)/dd(d. discribe)-->
+     <dl>
+    <dt>HTML and CSS</dt>
+    <dd>Hyper TEXT MARKUP LANGUAGE</dd> 
+    <dd>Cascading Style Sheets</dd>
+    </dl> 
+
+    <!--del for delete text and ins for Inserted Text--> 
+   <P>The price was <del>$50</del> now its <ins>$30</ins> </P>
+
+   <details>  <!--tag for Expandable Details-->
+    <summary>CLick to expand</summary>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque unde ducimus tempore debitis ratione illo doloribus impedit optio dolores est dolorum, reprehenderit repellat itaque quod amet omnis minus placeat, sint natus quisquam sequi harum? Cumque cum fugiat nostrum doloremque eaque corrupti nisi laboriosam, !</p>
+</details>
+
+    <p><dfn>HTML</dfn> stands for HyperText Markup Language.</p> <!--dfn for defination-->
+
+    <dialog id="myDialog">
+        <p>Life perahin.....Bujso!</p>
+        <button onclick="this.parentElement.close()">Close</button>
+    </dialog>
+    <button onclick="document.getElementById('myDialog').showModal()">Open Dialog</button> <br> <br>
+    
+
+      <div>  <!--div(devision= grouping of element  )-->
+        <h2>Welcome</h2>
+        <p>This is a section of content.</p>
+      </div>
+      
+     <em>janintahrim</em><!--italic word-->
+     <i>janintahrim</i><!--italic word--> <br>
+
+     <embed src="sample.pdf" type="application/pdf" width="10%" height="60px">
+
+        <object data="sample.pdf" type="application/pdf" width="100%" height="600px">
+            <p>আপনার ব্রাউজার এই পিডিএফ ফাইল দেখাতে পারছে না। <a href="sample.pdf">এখানে ক্লিক করুন</a> ডাউনলোড করতে।</p>
+        </object>
+
+         <p>how are you?</p>
+        <hr><!-- horizontal line=thematic break-->
+        <p>tahrim</p>
+        <!--embeds another web page-->
+        <iframe src="https://www.wikipedia.org/" width="600" height="400" frameborder="0"></iframe>
+         
+        <!--Represents keyboard input.-->
+        <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text.</p>
+
+        
+<form action="/submit" method="POST">
+    <fieldset> <!--Group form related element -->
+        <legend>Personal Info</legend> <!--Defines a caption for a fieldset.-->
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+      </fieldset>
+      <button type="submit">Submit</button>
+</form>
+
+    
+    <!-- col for define coloum and colgroup multicoloum-->
+    <table>
+        <colgroup>
+            <col style =" background-color: rgb(114, 114, 191);">
+            <col style =" background-color: rgb(138, 177, 113);">
+        </colgroup>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+          </tr>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+          </tr>
+    </table>
+
+    <!-- for website footer-->
+    <footer>
+        <p>&copy; 2025 My Website</p>
+      </footer>
+      
+
+</body>
+</html>
+
+
