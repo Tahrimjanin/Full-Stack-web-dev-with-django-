@@ -203,9 +203,3 @@ let max = arr4.reduce((accumulator, currentValue) => {
     return Math.max(accumulator, currentValue);
 }, -Infinity);
 console.log(max);
-
-// get the minimum number in the array
-let min = arr4.reduce((accumulator, currentValue) => {
-    return Math.min(accumulator, currentValue);
-}, Infinity);
-console.log(min);
