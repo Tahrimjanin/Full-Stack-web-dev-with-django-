@@ -1,4 +1,4 @@
-let  cricketers = ['shanto','sakib','tamim','mushfiqur','mahmudullah'];
+let cricketers = ['shanto','sakib','tamim','mushfiqur','mahmudullah'];
 
 //let loadCricketers = [];
 
