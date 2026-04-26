@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1 id="title"> Hello World!</h1>
+      <button>click me</button>
+
+      <script>
+        const h1= document.querySelector("h1");
+        const button = document.querySelector("button");
+        button.addEventListener("click", function(){
+            h1.textContent = "Hello JavaScript!";
+        })
+        </script>
+
+<ul>
+    <li>Item one</li>
+    <li>Item two</li>
+    <li>Item three</li>
+    <li>Item four</li>
+</ul>
+
+<p class="para">
+    This is a paragraph. 
+    It contains some text that can be manipulated using JavaScript.
+    You can change its content, style, or even hide it using DOM methods.
+</p>
+
+<p class="para">
+    This is another paragraph. 
+    It also contains text that can be manipulated using JavaScript.
+</p>    
+
+ <script>
+   //ID selector (get element -for single element)
+   //dom select korar somoe const use korbo
+   const title = document.getElementById('title');
+   title.style.color = 'red' ;
+   //by tag name 
+   const titles = document.getElementsByTagName('h1');
+   for(let i= 0 ;i<titles.length;i++){
+    titles[i].style.color ='blue' ;
+   }
+   //CLASS NAME 
+    const para = document.getElementsByClassName('para');
+    console.log(para) ;
+
+    //querySelector
+    const singleTitle = document.querySelector('.para') ;
+    singleTitle.style.color ='black'
+
+    //querySelectorall
+      const list = document.querySelectorAll('li') ;
+      list[0].style.color = 'red' ;
+
+   
+ </script>
+
+ <script> 
+  // simple calculator
+{% comment %} 
+  let num1 = Number(prompt('Enter first number:'));
+  let num2 = Number(prompt('Enter second number:'));
+
+  console.log(num1 + num2); {% endcomment %}
+let name1 = prompt('Enter your name');
+let name2 = prompt('Enter your partner name');
+
+let random = Math.ceil(Math.random() * 100);
+
+if (name1 == 'jeny' && name2 == 'xyz') {
+    random = 100;
+    alert(`The love score of ${name1} and ${name2} is ${random}%`);
+} else {
+    alert(`The love score of ${name1} and ${name2} is ${random}%`);
+}
+
+</script>
+
+
+</body>
+</html>
