@@ -14,7 +14,7 @@ let createTask = function(task) {
     let label = document.createElement('label');
 
     label.innerText = task;
-    checkBox.type = 'checkbox';
+    checkBox.type = ' checkbox ';
 
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
