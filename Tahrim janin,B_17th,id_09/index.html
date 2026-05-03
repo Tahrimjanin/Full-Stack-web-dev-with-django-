@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingdom Mega Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="promo-bar">
+    <p>Up to 25% off Every Friday &amp; Saturday</p>
+    <button class="promo-toggle" type="button" aria-label="Hide promotion">&times;</button>
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="Kingdom Mega Store home">
+      <span class="logo-crown">&#9819;</span>
+      <span class="logo-title">Kingdom</span>
+      <span class="logo-subtitle">Mega Store</span>
+    </a>
+
+    <form class="search-form">
+      <label class="sr-only" for="search">Search store</label>
+      <input id="search" class="search-input" type="search" placeholder="Search store">
+      <button class="search-button" type="submit" aria-label="Search">
+        <span aria-hidden="true">&#8981;</span>
+      </button>
+    </form>
+
+    <div class="header-actions">
+      <div class="top-links">
+        <a href="#">&#10033; Terms &amp; conditions</a>
+        <a href="#">&#9817; Contact Us</a>
+        <select aria-label="Currency">
+          <option>US Dollar</option>
+          <option>BD Taka</option>
+        </select>
+        <select aria-label="Language">
+          <option>EN</option>
+          <option>BN</option>
+        </select>
+      </div>
+
+      <div class="quick-links">
+        <a class="phone-link" href="tel:+8801719304086">
+          <span class="action-icon">&#9743;</span>
+          +8801719304086
+        </a>
+        <button class="plain-button wishlist-button" type="button">
+          <span class="action-icon">&#9825;</span>
+          Wishlist (0)
+        </button>
+        <button class="plain-button account-button" type="button">
+          <span class="account-icon">&#9679;</span>
+          Account
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <button class="category-toggle" type="button" aria-expanded="true">
+      <span class="hamburger" aria-hidden="true"></span>
+      Categories
+    </button>
+
+    <div class="nav-links">
+      <a href="#">About us</a>
+      <a href="#">News</a>
+      <a href="#">Blog</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Privacy notice</a>
+      <a href="#">Brands&#8964;</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-slider" aria-label="Featured store banners">
+        <img
+          class="hero-slide is-active"
+          src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=2200&q=80"
+          alt="Modern kitchen appliances in a bright home"
+        >
+        <img
+          class="hero-slide"
+          src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=2200&q=80"
+          alt="Washing machine and laundry appliances"
+        >
+        <img
+          class="hero-slide"
+          src="https://images.unsplash.com/photo-1567690187548-f07b1d7bf5a9?auto=format&fit=crop&w=2200&q=80"
+          alt="Television and living room electronics"
+        >
+      </div>
+
+      <aside class="category-panel">
+        <a href="#">Mixer Grinder</a>
+        <a href="#">Smart TV</a>
+        <a href="#">Cooking pan</a>
+        <a href="#">Washing machine</a>
+        <a href="#">Compact Washer</a>
+        <a href="#">Microwave Oven</a>
+        <a href="#">Computers</a>
+        <a href="#">Room Heater</a>
+        <a href="#">Cell Phones &amp; Accessories</a>
+        <a href="#">Refrigerators</a>
+      </aside>
+
+      <button class="slider-arrow slider-prev" type="button" aria-label="Previous slide">&lsaquo;</button>
+
+      <div class="hero-card">
+        <h1>Buy together<br>and get Rewarded</h1>
+        <a class="hero-cta" href="#">Explore More</a>
+      </div>
+
+      <button class="slider-arrow slider-next" type="button" aria-label="Next slide">&rsaquo;</button>
+
+      <button class="floating-target" type="button" aria-label="Compare products">&#9678;</button>
+      <button class="cart-button" type="button" aria-label="Shopping cart">
+        <span class="cart-count">(0)</span>
+        <span class="cart-icon">&#128722;</span>
+      </button>
+    </section>
+
+    <section class="featured-categories" aria-labelledby="featured-title">
+      <h2 id="featured-title">Featured Categories</h2>
+
+      <div class="featured-grid">
+        <a class="featured-card featured-gold" href="#">
+          <img class="category-photo" src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=420&q=80" alt="Smart TV">
+          <span class="category-art tv-art" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="featured-copy">
+            <span class="featured-name">Smart TV</span>
+            <span class="featured-line" aria-hidden="true"></span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+
+        <a class="featured-card featured-purple" href="#">
+          <img class="category-photo" src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=420&q=80" alt="Mixer grinders">
+          <span class="category-art mixer-art" aria-hidden="true">
+            <span class="mixer-jar main-jar"></span>
+            <span class="mixer-base"></span>
+            <span class="mixer-jar small-jar left-jar"></span>
+            <span class="mixer-jar small-jar right-jar"></span>
+          </span>
+          <span class="featured-copy">
+            <span class="featured-name">Mixer Grinders</span>
+            <span class="featured-line" aria-hidden="true"></span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+
+        <a class="featured-card featured-gold" href="#">
+          <img class="category-photo" src="assets/ceramic-pan-set.svg" alt="Cooking pan">
+          <span class="category-art pan-art" aria-hidden="true">
+            <span class="pan"></span>
+            <span class="pot"></span>
+            <span class="lid"></span>
+          </span>
+          <span class="featured-copy">
+            <span class="featured-name">Cooking pan</span>
+            <span class="featured-line" aria-hidden="true"></span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+
+        <a class="featured-card featured-purple" href="#">
+          <img class="category-photo" src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=420&q=80" alt="Room heater">
+          <span class="category-art heater-art" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="featured-copy">
+            <span class="featured-name">Room heater</span>
+            <span class="featured-line" aria-hidden="true"></span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+
+        <a class="featured-card featured-gold" href="#">
+          <img class="category-photo" src="https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=420&q=80" alt="Washing machine">
+          <span class="category-art washer-art" aria-hidden="true">
+            <span class="washer-main"></span>
+            <span class="washer-side"></span>
+          </span>
+          <span class="featured-copy">
+            <span class="featured-name">Washing machine</span>
+            <span class="featured-line" aria-hidden="true"></span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+
+        <a class="featured-card featured-purple" href="#">
+          <img class="category-photo" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=420&q=80" alt="Cell phones and accessories">
+          <span class="category-art phone-art" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </span>
+          <span class="featured-copy">
+            <span class="featured-name">Cell Phones &amp;<br>Accessories</span>
+            <span class="featured-line" aria-hidden="true"></span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+
+        <a class="featured-card featured-gold" href="#">
+          <img class="category-photo" src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=420&q=80" alt="Microwave oven">
+          <span class="category-art oven-art" aria-hidden="true">
+            <span></span>
+          </span>
+          <span class="featured-copy">
+            <span class="featured-name">Micro woven</span>
+            <span class="featured-line" aria-hidden="true"></span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+
+        <a class="featured-card featured-purple" href="#">
+          <img class="category-photo" src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=420&q=80" alt="Refrigerators">
+          <span class="category-art fridge-art" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="featured-copy">
+            <span class="featured-name">Refrigerators</span>
+            <span class="featured-line" aria-hidden="true"></span>
+          </span>
+          <span class="featured-arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="daily-deals" aria-labelledby="daily-deals-title">
+      <div class="deal-sidebar" aria-label="Sale countdown">
+        <div class="countdown" aria-label="Deal countdown">
+          <span><strong>180</strong>Days</span>
+          <span><strong>17</strong>Hours</span>
+          <span><strong>04</strong>Minutes</span>
+          <span><strong>25</strong>Seconds</span>
+        </div>
+
+        <div class="sale-poster">
+          <p class="sale-title">SALE</p>
+          <p class="sale-percent">UP TO <strong>75%</strong> OFF</p>
+        </div>
+      </div>
+
+      <div class="deals-content">
+        <div class="section-heading">
+          <h2 id="daily-deals-title">Deal of the days</h2>
+          <div class="section-controls" aria-label="Deal controls">
+            <button class="mini-arrow deal-scroll-prev" type="button" aria-label="Previous deals">&lsaquo;</button>
+            <button class="mini-arrow deal-scroll-next" type="button" aria-label="Next deals">&rsaquo;</button>
+          </div>
+        </div>
+
+        <div class="deal-product-row" id="deal-products">
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=500&q=80" alt="Havells mixer grinder">
+            <h3>Havells Sprint MG (3SS Jar) 500w Mixer Grinder</h3>
+            <div class="rating" aria-label="3 out of 5 stars">★★★☆☆</div>
+            <p class="price">$500.00</p>
+            <div class="buy-panel">
+              <div class="qty-box" aria-label="Quantity">
+                <span>1</span>
+                <button type="button" aria-label="Increase quantity">+</button>
+                <button type="button" aria-label="Decrease quantity">-</button>
+              </div>
+              <button class="buy-button" type="button">Buy Now</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=500&q=80" alt="Konka microwave oven">
+            <h3>K2MG3EPYX - KONKA MICROWAVE OVEN (23 LITER)</h3>
+            <div class="rating muted-stars" aria-label="0 out of 5 stars">☆☆☆☆☆</div>
+            <div class="swatches" aria-label="Available colors">
+              <span style="background:#c7c7c7"></span>
+              <span style="background:#171717"></span>
+            </div>
+            <p class="price">$2,005.00</p>
+            <div class="buy-panel">
+              <div class="qty-box" aria-label="Quantity">
+                <span>1</span>
+                <button type="button" aria-label="Increase quantity">+</button>
+                <button type="button" aria-label="Decrease quantity">-</button>
+              </div>
+              <button class="buy-button" type="button">Buy Now</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="badges">
+              <span>Top</span>
+              <span>New</span>
+            </div>
+            <img src="assets/mint-cookware-set.svg" alt="Mint cookware set">
+            <h3>4 Way Mini Cassette Frying Pan</h3>
+            <div class="rating muted-stars" aria-label="0 out of 5 stars">☆☆☆☆☆</div>
+            <div class="swatches" aria-label="Available colors">
+              <span style="background:#9ed6cf"></span>
+            </div>
+            <p class="price">$50.00</p>
+            <div class="buy-panel">
+              <div class="qty-box" aria-label="Quantity">
+                <span>1</span>
+                <button type="button" aria-label="Increase quantity">+</button>
+                <button type="button" aria-label="Decrease quantity">-</button>
+              </div>
+              <button class="buy-button" type="button">Buy Now</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="assets/ceramic-pan-set.svg" alt="Ceramic cooking pan set">
+            <h3>Housy Ceramic Cooking pan Set</h3>
+            <div class="rating muted-stars" aria-label="0 out of 5 stars">☆☆☆☆☆</div>
+            <div class="swatches" aria-label="Available colors">
+              <span style="background:#a99799"></span>
+            </div>
+            <p class="price"><del>$600.00</del> $500.00</p>
+            <div class="buy-panel">
+              <div class="qty-box" aria-label="Quantity">
+                <span>1</span>
+                <button type="button" aria-label="Increase quantity">+</button>
+                <button type="button" aria-label="Decrease quantity">-</button>
+              </div>
+              <button class="buy-button" type="button">Buy Now</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1603204077779-bed963ea7d0e?auto=format&fit=crop&w=500&q=80" alt="Pink ceramic cookware set">
+            <h3>Neoflam Retro 5pc Ceramic Nonstick Cookware Set</h3>
+            <div class="rating muted-stars" aria-label="0 out of 5 stars">☆☆☆☆☆</div>
+            <div class="swatches" aria-label="Available colors">
+              <span style="background:#ef9aaa"></span>
+            </div>
+            <p class="price">$500.00</p>
+            <div class="buy-panel">
+              <div class="qty-box" aria-label="Quantity">
+                <span>1</span>
+                <button type="button" aria-label="Increase quantity">+</button>
+                <button type="button" aria-label="Decrease quantity">-</button>
+              </div>
+              <button class="buy-button" type="button">Buy Now</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-showcase" aria-label="New arrivals and custom products">
+      <a class="showcase-banner" href="#">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Cooking pan on a kitchen counter">
+        <span>Cooking pan</span>
+      </a>
+
+      <div class="showcase-products">
+        <div class="showcase-header">
+          <div class="product-tabs" role="tablist" aria-label="Product groups">
+            <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab="new-arrivals">New Arrivals</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="custom-products">Custom Products</button>
+          </div>
+
+          <div class="section-controls" aria-label="Showcase controls">
+            <button class="mini-arrow showcase-prev" type="button" aria-label="Previous products">&lsaquo;</button>
+            <button class="mini-arrow showcase-next" type="button" aria-label="Next products">&rsaquo;</button>
+          </div>
+        </div>
+
+        <div class="compact-grid is-active" id="new-arrivals" role="tabpanel">
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1584990347449-a321af15d321?auto=format&fit=crop&w=260&q=80" alt="Rose gold cookware set">
+            <div>
+              <h3>Cookware Pan Set Rose Gold Saucepan</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$500.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1590794056474-571d28e1cc20?auto=format&fit=crop&w=260&q=80" alt="Ceramic cookware set">
+            <div>
+              <h3>Reserve Ceramic Nonstick 10-Piece Cookware Set</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$500.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=260&q=80" alt="Frying pan">
+            <div>
+              <h3>Calphalon 2029647 10-Inch Frying Pan</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$510.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1592156328697-079f6ee0cfa5?auto=format&fit=crop&w=260&q=80" alt="Copper frying pan">
+            <div>
+              <h3>Nopper Fry Pan</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$510.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1603204077779-bed963ea7d0e?auto=format&fit=crop&w=260&q=80" alt="Non-stick frying pan">
+            <div>
+              <h3>Pensofal PEN 6906 Non-Stick Eco-Friendly 9 Layer</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$510.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1584990347449-a321af15d321?auto=format&fit=crop&w=260&q=80" alt="Cookware set">
+            <div>
+              <h3>Heim Concept Cookware Set W-001 12-Piece</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$502.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=260&q=80" alt="Android TV">
+            <div>
+              <h3>Panasonic TN60 Android TV</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$500.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=260&q=80" alt="Philips Android TV">
+            <div>
+              <h3>Philips Android TV</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$1,099.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <div class="badges compact-badges">
+              <span>Top</span>
+              <span>New</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=260&q=80" alt="Panasonic TV">
+            <div>
+              <h3>Panasonic 4K USD TV</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$1,099.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=260&q=80" alt="Samsung TV">
+            <div>
+              <h3>Samsung 43-inch Ultra HD (4K)</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$1,099.00</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="compact-grid" id="custom-products" role="tabpanel" hidden>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=260&q=80" alt="Kitchen appliance">
+            <div>
+              <h3>Custom Kitchen Appliance Bundle</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$760.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=260&q=80" alt="Mixer set">
+            <div>
+              <h3>Personal Mixer Set With Extra Jar</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$430.00</p>
+            </div>
+          </article>
+          <article class="compact-product">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=260&q=80" alt="Cooking bundle">
+            <div>
+              <h3>Premium Cooking Pan Bundle</h3>
+              <div class="tiny-rating">☆☆☆☆☆</div>
+              <p>$620.00</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products-band" aria-labelledby="featured-products-title">
+      <div class="section-heading featured-products-heading">
+        <h2 id="featured-products-title">Featured Products</h2>
+        <div class="section-controls" aria-label="Featured product controls">
+          <button class="mini-arrow featured-prev" type="button" aria-label="Previous featured products">&lsaquo;</button>
+          <button class="mini-arrow featured-next" type="button" aria-label="Next featured products">&rsaquo;</button>
+        </div>
+      </div>
+
+      <div class="featured-products-row" id="featured-products">
+        <article class="product-card featured-product-card">
+          <img src="assets/ceramic-pan-set.svg" alt="Ceramic cooking pan set">
+          <h3>Housy Ceramic Cooking pan Set</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#a99799"></span>
+          </div>
+          <p class="price"><del>$600.00</del> $500.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card featured-product-card">
+          <img src="https://images.unsplash.com/photo-1603204077779-bed963ea7d0e?auto=format&fit=crop&w=520&q=80" alt="Pink ceramic nonstick cookware set">
+          <h3>Neoflam Retro 5pc Ceramic Nonstick Cookware Set</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#ef9aaa"></span>
+          </div>
+          <p class="price">$500.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card featured-product-card">
+          <img src="https://images.unsplash.com/photo-1584990347449-a321af15d321?auto=format&fit=crop&w=520&q=80" alt="Black aluminum non-stick cookware set">
+          <h3>Delcasa DC1749 Aluminum Non-Stick Cookware Set</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#52616f"></span>
+          </div>
+          <p class="price">$1,500.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card featured-product-card">
+          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=520&q=80" alt="Most aluminum alloy cookware set">
+          <h3>MOSTA Mosta Aluminum Alloy Non-Stick Cookware Set</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#c9aae6"></span>
+            <span style="background:#1fa6b8"></span>
+          </div>
+          <p class="price">$500.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card featured-product-card">
+          <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=520&q=80" alt="Pink and black Apple iPad Air">
+          <h3>2022 Apple iPad Air (10.9-inch, Wi-Fi, 64GB) - Pink &amp; Black</h3>
+          <div class="rating" aria-label="5 out of 5 stars">&starf;&starf;&starf;&starf;&starf;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#ffc5b8"></span>
+            <span style="background:#000000"></span>
+          </div>
+          <p class="price"><del>$2,000.00</del> $1,500.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card featured-product-card is-out-of-stock">
+          <img src="https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=520&q=80" alt="Red front load washing machine">
+          <h3>LG 9kg Black Steel Front Load Washing Machine</h3>
+          <div class="rating" aria-label="4 out of 5 stars">&starf;&starf;&starf;&starf;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#000000"></span>
+            <span style="background:#ffffff"></span>
+            <span style="background:#ff0000"></span>
+          </div>
+          <p class="stock-message">Out of stock</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button" disabled>Buy Now</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="category-news-area" aria-label="Category products, blogs, and news">
+      <div class="category-panel-grid">
+        <section class="wide-category-panel" aria-label="Smart TV products">
+          <a class="wide-category-banner" href="#">
+            <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=720&q=80" alt="Smart TV showing a blue flower display">
+            <span>Smart TV</span>
+          </a>
+
+          <div class="wide-products">
+            <div class="wide-products-header">
+              <div class="product-tabs" aria-label="Smart TV product groups">
+                <button class="tab-button is-active" type="button">New Arrivals</button>
+                <button class="tab-button" type="button">Best Sellers</button>
+              </div>
+              <div class="wide-counter">
+                <span>2 / 4</span>
+                <button class="mini-arrow smart-prev" type="button" aria-label="Previous smart TV products">&lsaquo;</button>
+                <button class="mini-arrow smart-next" type="button" aria-label="Next smart TV products">&rsaquo;</button>
+              </div>
+            </div>
+
+            <div class="wide-product-grid" id="smart-products">
+              <article class="wide-product">
+                <div class="badges compact-badges">
+                  <span>Top</span>
+                  <span>New</span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=260&q=80" alt="Panasonic TV">
+                <div>
+                  <h3>Panasonic 4K USD TV</h3>
+                  <div class="tiny-rating">&star;&star;&star;&star;&star;</div>
+                </div>
+              </article>
+              <article class="wide-product">
+                <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=260&q=80" alt="Samsung QLED TV">
+                <div>
+                  <h3>Samsung 75-inch QLED 8K TV</h3>
+                  <div class="tiny-rating">&star;&star;&star;&star;&star;</div>
+                  <p>$1,099.00</p>
+                </div>
+              </article>
+              <article class="wide-product">
+                <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=260&q=80" alt="Sony Android LED TV">
+                <div>
+                  <h3>Sony 4K Ultra HD Android LED TV</h3>
+                  <div class="tiny-rating">&star;&star;&star;&star;&star;</div>
+                  <p>$1,099.00</p>
+                </div>
+              </article>
+              <article class="wide-product">
+                <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=260&q=80" alt="Samsung 8K TV">
+                <div>
+                  <h3>Samsung Q800T 8K TV</h3>
+                  <div class="tiny-rating">&star;&star;&star;&star;&star;</div>
+                  <p>$1,099.00</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="wide-category-panel" aria-label="Mixer grinder products">
+          <a class="wide-category-banner" href="#">
+            <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=720&q=80" alt="Mixer grinder with orange lids">
+            <span>Mixer Grinder</span>
+          </a>
+
+          <div class="wide-products">
+            <div class="wide-products-header">
+              <div class="product-tabs" aria-label="Mixer grinder product groups">
+                <button class="tab-button is-active" type="button">New Arrivals</button>
+                <button class="tab-button" type="button">Best Sellers</button>
+              </div>
+              <div class="section-controls">
+                <button class="mini-arrow mixer-prev" type="button" aria-label="Previous mixer products">&lsaquo;</button>
+                <button class="mini-arrow mixer-next" type="button" aria-label="Next mixer products">&rsaquo;</button>
+              </div>
+            </div>
+
+            <div class="wide-product-grid" id="mixer-products">
+              <article class="wide-product">
+                <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=260&q=80" alt="Hamilton blender">
+                <div>
+                  <h3>Hamilton Beach Professional</h3>
+                  <div class="tiny-rating">&star;&star;&star;&star;&star;</div>
+                  <p>$720.00</p>
+                </div>
+              </article>
+              <article class="wide-product">
+                <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=260&q=80" alt="Ninja blender">
+                <div>
+                  <h3>Ninja Professional Plus Blender</h3>
+                  <div class="tiny-rating">&star;&star;&star;&star;&star;</div>
+                  <p>$220.00</p>
+                </div>
+              </article>
+              <article class="wide-product">
+                <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=260&q=80" alt="Ninja to Bosch blender">
+                <div>
+                  <h3>Ninja to Bosch British GQ</h3>
+                  <div class="tiny-rating">&star;&star;&star;&star;&star;</div>
+                  <p>$340.00</p>
+                </div>
+              </article>
+              <article class="wide-product">
+                <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=260&q=80" alt="NutriBullet blender combo">
+                <div>
+                  <h3>NutriBullet Blender Combo</h3>
+                  <div class="tiny-rating">&star;&star;&star;&star;&star;</div>
+                  <p>$720.00</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="content-feed-grid">
+        <section class="latest-blogs" aria-labelledby="latest-blogs-title">
+          <div class="feed-heading">
+            <h2 id="latest-blogs-title">Latest Blogs</h2>
+            <a href="#">View All</a>
+          </div>
+
+          <div class="blog-card-grid">
+            <article class="blog-card">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=620&q=80" alt="Workspace with laptop and tablet">
+              <time datetime="2022-04-07">April 07, 2022(0)</time>
+              <h3><a href="#">Why Are Digital Products So Profitable?</a></h3>
+              <p>The best part about creating a digital product is that you only have to create it once, and you can then sell it thousands of...</p>
+              <a class="read-more" href="#">Read More</a>
+            </article>
+
+            <article class="blog-card">
+              <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=620&q=80" alt="Modern kitchen with refrigerator">
+              <time datetime="2022-04-07">April 07, 2022(0)</time>
+              <h3><a href="#">The Most Profitable Digital Products to Se...</a></h3>
+              <p>If you've ever brewed beer, made old-fashioned sauerkraut, or experimented with one of the many other fermented...</p>
+              <a class="read-more" href="#">Read More</a>
+            </article>
+
+            <article class="blog-card">
+              <img src="https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=620&q=80" alt="Laundry machine in a bright room">
+              <time datetime="2022-04-07">April 07, 2022(0)</time>
+              <h3><a href="#">Robot Highlight - Mini Cheetah Hits New ...</a></h3>
+              <p>Hoping to progress the mobility of four-legged robots, a team of MIT engineers has developed a new type of control system tha...</p>
+              <a class="read-more" href="#">Read More</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="latest-news" aria-labelledby="latest-news-title">
+          <div class="feed-heading">
+            <h2 id="latest-news-title">Latest News</h2>
+            <a href="#">View All</a>
+          </div>
+
+          <div class="news-list">
+            <article class="news-card">
+              <img src="https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=520&q=80" alt="Front load washing machine">
+              <div>
+                <h3>New online store is open!</h3>
+                <time datetime="2022-03-08">March 08, 2022 <span>(29)</span></time>
+                <p>The new nopCommerce store is open now! We are very excited to offer our new range of products. We will be constantly adding to our range so please register on our...</p>
+                <a class="read-more" href="#">Read More</a>
+              </div>
+            </article>
+
+            <article class="news-card">
+              <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=520&q=80" alt="White and blue mixer grinder">
+              <div>
+                <h3>nopCommerce new release!</h3>
+                <time datetime="2022-03-08">March 08, 2022 <span>(38)</span></time>
+                <p>nopCommerce includes everything you need to begin your e-commerce online store. We have thought of everything and it's all included! nopCommerce is a fully customizable...</p>
+                <a class="read-more" href="#">Read More</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="best-sale-band" aria-labelledby="best-sale-title">
+      <div class="section-heading best-sale-heading">
+        <h2 id="best-sale-title">Best Sale</h2>
+        <div class="section-controls" aria-label="Best sale controls">
+          <button class="mini-arrow best-sale-prev" type="button" aria-label="Previous best sale products">&lsaquo;</button>
+          <button class="mini-arrow best-sale-next" type="button" aria-label="Next best sale products">&rsaquo;</button>
+        </div>
+      </div>
+
+      <div class="best-sale-row" id="best-sale-products">
+        <article class="product-card best-sale-card">
+          <div class="quick-action-stack" aria-label="Product actions">
+            <button type="button" aria-label="Add to cart">♧</button>
+            <button type="button" aria-label="Compare">⌘</button>
+            <button type="button" aria-label="Add to wishlist">♡</button>
+            <button type="button" aria-label="Quick view">⌕</button>
+          </div>
+          <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=520&q=80" alt="Sony 4K Android LED TV">
+          <h3>Sony 4K Ultra HD Android LED TV</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#a9c58a"></span>
+          </div>
+          <p class="price">$1,099.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button sale-buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card best-sale-card">
+          <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=520&q=80" alt="Samsung 75-inch QLED 8K TV">
+          <h3>Samsung 75-Inch QLED 8K TV</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#7c8791"></span>
+          </div>
+          <p class="price">$1,090.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card best-sale-card">
+          <img src="https://images.unsplash.com/photo-1584990347449-a321af15d321?auto=format&fit=crop&w=520&q=80" alt="Heim concept cookware set">
+          <h3>Heim Concept Cookware Set W-001 12-Piece</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#c7cbd1"></span>
+          </div>
+          <p class="price">$502.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card best-sale-card">
+          <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=520&q=80" alt="Panasonic TN60 Android TV">
+          <h3>Panasonic TN60 Android TV</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#4f4f4f"></span>
+          </div>
+          <p class="price">$500.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card best-sale-card">
+          <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=520&q=80" alt="Philips Android TV">
+          <h3>Philips Android TV</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#51565f"></span>
+          </div>
+          <p class="price">$1,099.00</p>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+
+        <article class="product-card best-sale-card">
+          <div class="badges">
+            <span>Top</span>
+            <span>New</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=520&q=80" alt="Panasonic 4K USD TV">
+          <h3>Panasonic 4K USD TV</h3>
+          <div class="rating muted-stars" aria-label="0 out of 5 stars">&star;&star;&star;&star;&star;</div>
+          <div class="swatches" aria-label="Available colors">
+            <span style="background:#c59ad5"></span>
+          </div>
+          <div class="buy-panel">
+            <div class="qty-box" aria-label="Quantity">
+              <span>1</span>
+              <button type="button" aria-label="Increase quantity">+</button>
+              <button type="button" aria-label="Decrease quantity">-</button>
+            </div>
+            <button class="buy-button" type="button">Buy Now</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-appliance-promo" aria-label="Smart home appliance promotion">
+      <div class="promo-copy-panel">
+        <h2>Smart<br>Home Appliances</h2>
+        <a href="#">Explore More</a>
+      </div>
+      <img src="assets/smart-home-appliances.svg" alt="Air fryer on a modern kitchen counter">
+    </section>
+
+    <section class="manufacturers-section" aria-labelledby="manufacturers-title">
+      <div class="section-heading manufacturers-heading">
+        <h2 id="manufacturers-title">Manufacturers</h2>
+        <div class="section-controls" aria-label="Manufacturer controls">
+          <button class="mini-arrow manufacturers-prev" type="button" aria-label="Previous manufacturers">&lsaquo;</button>
+          <button class="mini-arrow manufacturers-next" type="button" aria-label="Next manufacturers">&rsaquo;</button>
+        </div>
+      </div>
+
+      <div class="manufacturer-grid" id="manufacturer-grid">
+        <a class="manufacturer-card iittala" href="#">iittala</a>
+        <a class="manufacturer-card philips" href="#">PHILIPS</a>
+        <a class="manufacturer-card sony" href="#">SONY</a>
+        <a class="manufacturer-card corkcicle" href="#">CORKCICLE</a>
+        <a class="manufacturer-card canon" href="#">Canon</a>
+        <a class="manufacturer-card hitachi" href="#">HITACHI</a>
+        <a class="manufacturer-card bruhm" href="#">BRUHM</a>
+        <a class="manufacturer-card walton" href="#">WALTON</a>
+        <a class="manufacturer-card panasonic" href="#">Panasonic</a>
+        <a class="manufacturer-card samsung" href="#">SAMSUNG</a>
+        <a class="manufacturer-card umbra" href="#">umbra</a>
+        <a class="manufacturer-card apple" href="#">Apple</a>
+        <a class="manufacturer-card hisense" href="#">Hisense</a>
+        <a class="manufacturer-card haiser" href="#">Haiser</a>
+        <a class="manufacturer-card scanfrost" href="#">Scanfrost</a>
+        <a class="manufacturer-card dometic" href="#">DOMETIC</a>
+      </div>
+    </section>
+
+    <section class="store-services" aria-label="Store services">
+      <article class="service-card">
+        <span class="service-icon">24</span>
+        <div>
+          <h3>Support 24/7</h3>
+          <p>Our dedicated support team is available 24/7 to assist you with any inquiries.</p>
+        </div>
+      </article>
+      <article class="service-card">
+        <span class="service-icon">↩</span>
+        <div>
+          <h3>30 Day Return Policy</h3>
+          <p>Return eligible items within 30 days of purchase. Terms apply.</p>
+        </div>
+      </article>
+      <article class="service-card">
+        <span class="service-icon">↬</span>
+        <div>
+          <h3>World wide Shipping</h3>
+          <p>Explore the stunning American landscape, where...</p>
+        </div>
+      </article>
+      <article class="service-card">
+        <span class="service-icon">□</span>
+        <div>
+          <h3>Free Delivery</h3>
+          <p>Enjoy free delivery on all orders! Shop now and have your items delivered to your door.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="footer-logo logo" href="#" aria-label="Kingdom Mega Store home">
+          <span class="logo-crown">&#9819;</span>
+          <span class="logo-title">Kingdom</span>
+          <span class="logo-subtitle">Mega Store</span>
+        </a>
+        <div class="social-links" aria-label="Social links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">t</a>
+          <a href="#" aria-label="RSS">rss</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+        <form class="newsletter-form">
+          <label for="newsletter-email">Newsletter</label>
+          <div>
+            <input id="newsletter-email" type="email" placeholder="Enter your email here...">
+            <button type="submit" aria-label="Subscribe">✉</button>
+          </div>
+        </form>
+      </div>
+
+      <section class="footer-column" aria-labelledby="contact-footer-title">
+        <h2 id="contact-footer-title">Contact Us</h2>
+        <address>
+          8th floor, Plot#2, Amtoli, Bir Uttam AK Khandakar Rd, Mohakhali Commercial Area, Dhaka-1212
+        </address>
+        <p>Email: sales@nop-station.com</p>
+        <p>Phone: +880 1720675492</p>
+      </section>
+
+      <section class="footer-column" aria-labelledby="info-footer-title">
+        <h2 id="info-footer-title">Information</h2>
+        <a href="#">Refrigerators</a>
+        <a href="#">Shipping &amp; returns</a>
+        <a href="#">Privacy notice</a>
+        <a href="#">Conditions of Use</a>
+        <a href="#">About us</a>
+        <a href="#">Contact us</a>
+      </section>
+
+      <section class="footer-column" aria-labelledby="service-footer-title">
+        <h2 id="service-footer-title">Customer service</h2>
+        <a href="#">Search</a>
+        <a href="#">News</a>
+        <a href="#">Blog</a>
+        <a href="#">Recently viewed products</a>
+        <a href="#">Compare products list</a>
+        <a href="#">New products</a>
+      </section>
+
+      <section class="footer-column" aria-labelledby="account-footer-title">
+        <h2 id="account-footer-title">My account</h2>
+        <a href="#">My account</a>
+        <a href="#">Orders</a>
+        <a href="#">Addresses</a>
+        <a href="#">Shopping cart</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Apply for vendor account</a>
+      </section>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Powered by <a href="#">nopCommerce</a></p>
+      <p>Designed By <strong>nopStation</strong></p>
+      <div class="payment-badges" aria-label="Accepted payments">
+        <span>VISA</span>
+        <span>MC</span>
+        <span>PayPal</span>
+      </div>
+      <p>Copyright &copy; 2026 Kingdom. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

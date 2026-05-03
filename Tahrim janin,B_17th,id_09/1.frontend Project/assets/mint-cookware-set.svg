@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-labelledby="title desc">
+  <title id="title">Mint cookware set</title>
+  <desc id="desc">A mint and cream nonstick cookware set with pans, pots, lids, and wooden utensils.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e7fbf6"/>
+      <stop offset="1" stop-color="#fff7e8"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" x2="1">
+      <stop offset="0" stop-color="#87d7cc"/>
+      <stop offset="0.55" stop-color="#d8fbf4"/>
+      <stop offset="1" stop-color="#5bbdb2"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff7e8"/>
+      <stop offset="1" stop-color="#e4d3b4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#1f2937" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="520" height="360" rx="18" fill="url(#bg)"/>
+  <circle cx="86" cy="78" r="50" fill="#ffffff" opacity=".65"/>
+  <circle cx="440" cy="290" r="66" fill="#f2b91d" opacity=".16"/>
+  <g filter="url(#shadow)">
+    <rect x="83" y="215" width="146" height="52" rx="26" fill="url(#mint)"/>
+    <ellipse cx="156" cy="215" rx="76" ry="28" fill="#f8fff9"/>
+    <ellipse cx="156" cy="214" rx="56" ry="18" fill="#8edbd0"/>
+    <rect x="214" y="195" width="128" height="15" rx="8" fill="#d99b59" transform="rotate(-22 214 195)"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="259" y="154" width="128" height="88" rx="24" fill="url(#mint)"/>
+    <ellipse cx="323" cy="154" rx="68" ry="25" fill="#f8fff9"/>
+    <ellipse cx="323" cy="151" rx="44" ry="14" fill="#b3efe6"/>
+    <path d="M262 186 C229 182 229 217 263 212" fill="none" stroke="#73c9bd" stroke-width="13" stroke-linecap="round"/>
+    <path d="M386 186 C421 182 421 217 386 212" fill="none" stroke="#73c9bd" stroke-width="13" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="151" y="128" width="106" height="75" rx="22" fill="url(#cream)"/>
+    <ellipse cx="204" cy="128" rx="56" ry="22" fill="#ffffff"/>
+    <path d="M170 117 C185 86 222 86 238 117" fill="none" stroke="#7bcfc5" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="204" cy="99" r="10" fill="#7bcfc5"/>
+  </g>
+  <g>
+    <rect x="354" y="105" width="15" height="156" rx="8" fill="#cc8d50" transform="rotate(-27 361 183)"/>
+    <rect x="388" y="103" width="15" height="154" rx="8" fill="#bc7a35" transform="rotate(18 395 180)"/>
+    <path d="M337 93 C359 59 382 62 392 101 Z" fill="#d9a062"/>
+    <path d="M400 86 C423 52 446 56 454 96 Z" fill="#c68a4c"/>
+  </g>
+</svg>

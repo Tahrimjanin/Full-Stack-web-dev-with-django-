@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Smart home appliances kitchen banner</title>
+  <desc id="desc">A modern kitchen counter with a glossy air fryer, vegetables, plates, and warm cabinet lighting.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e8f0ed"/>
+      <stop offset="0.48" stop-color="#cddbd8"/>
+      <stop offset="1" stop-color="#f5efe4"/>
+    </linearGradient>
+    <linearGradient id="counter" x1="0" x2="1">
+      <stop offset="0" stop-color="#e9e4d7"/>
+      <stop offset="0.45" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#d7c9b5"/>
+    </linearGradient>
+    <linearGradient id="fryerBody" x1="0" x2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.38" stop-color="#d9e2e6"/>
+      <stop offset="0.52" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b5c0c7"/>
+    </linearGradient>
+    <linearGradient id="blackGlass" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#262628"/>
+      <stop offset="0.45" stop-color="#050506"/>
+      <stop offset="1" stop-color="#2a221b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#d18920"/>
+      <stop offset="0.5" stop-color="#f5c35d"/>
+      <stop offset="1" stop-color="#a76014"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#2a2119" flood-opacity="0.28"/>
+    </filter>
+    <filter id="blurBack">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#wall)"/>
+  <rect y="338" width="1200" height="182" fill="url(#counter)"/>
+  <path d="M0 356 C220 329 343 385 535 359 C730 332 882 333 1200 354 L1200 520 L0 520 Z" fill="#f7f1e5" opacity="0.82"/>
+
+  <g filter="url(#blurBack)" opacity="0.82">
+    <rect x="0" y="0" width="290" height="334" fill="#dbe7e4"/>
+    <rect x="40" y="22" width="76" height="250" rx="38" fill="#f8fbfa" opacity="0.65"/>
+    <rect x="154" y="30" width="50" height="238" rx="25" fill="#b3c8c4" opacity="0.5"/>
+    <rect x="875" y="52" width="310" height="76" rx="10" fill="#e9ddcc"/>
+    <rect x="890" y="74" width="270" height="10" rx="5" fill="#f9d793"/>
+    <rect x="980" y="140" width="84" height="160" rx="12" fill="#d5c0a4"/>
+    <rect x="1095" y="160" width="18" height="150" rx="8" fill="#b78e58"/>
+  </g>
+
+  <g opacity="0.92">
+    <rect x="162" y="248" width="154" height="90" rx="10" fill="#d7c096"/>
+    <ellipse cx="240" cy="250" rx="80" ry="18" fill="#efe3ca"/>
+    <circle cx="207" cy="227" r="24" fill="#94b35d"/>
+    <circle cx="243" cy="221" r="20" fill="#e9cd8b"/>
+    <circle cx="274" cy="230" r="24" fill="#b9cf75"/>
+    <rect x="360" y="205" width="14" height="120" rx="7" fill="#a36828"/>
+    <rect x="384" y="184" width="14" height="141" rx="7" fill="#c9812e" transform="rotate(8 391 254)"/>
+    <rect x="413" y="196" width="14" height="130" rx="7" fill="#8b5d2e" transform="rotate(-14 420 261)"/>
+    <path d="M351 185 C363 145 379 145 392 185 Z" fill="#b88953"/>
+    <path d="M403 178 C414 134 430 135 443 178 Z" fill="#c9985b"/>
+  </g>
+
+  <g transform="translate(606 71)" filter="url(#softShadow)">
+    <path d="M98 0 H279 C331 0 366 42 366 96 V334 C366 391 329 427 274 427 H86 C32 427 0 390 0 336 V99 C0 42 42 0 98 0 Z" fill="url(#fryerBody)"/>
+    <path d="M184 0 H283 C333 0 366 44 366 99 V333 C366 389 330 427 276 427 H170 C218 334 228 92 184 0 Z" fill="#eef4f5" opacity="0.45"/>
+    <path d="M170 15 H286 C322 15 348 44 348 83 V228 H154 V83 C154 44 133 15 170 15 Z" fill="url(#blackGlass)"/>
+    <path d="M337 113 C356 117 366 130 366 151 V318 C366 364 338 395 292 395 H166 C145 395 130 381 130 361 V284 H254 C302 284 337 250 337 203 Z" fill="url(#blackGlass)"/>
+    <path d="M152 283 H302 C312 283 320 291 320 301 V342 C320 372 295 396 264 396 H171 C139 396 115 372 115 342 V320 C115 299 131 283 152 283 Z" fill="#f5f6f2"/>
+    <path d="M146 284 H307 C316 284 324 292 324 302 V340 C324 372 298 397 265 397 H170 C137 397 112 372 112 340 V320 C112 300 127 284 146 284 Z" fill="none" stroke="url(#gold)" stroke-width="5"/>
+    <rect x="260" y="60" width="54" height="144" rx="24" fill="#dadfdf"/>
+    <rect x="276" y="77" width="22" height="110" rx="11" fill="#aeb7b9"/>
+    <path d="M158 304 C201 276 253 279 292 305 C268 335 192 337 158 304 Z" fill="#1c231d"/>
+    <circle cx="196" cy="301" r="22" fill="#d84422"/>
+    <circle cx="234" cy="301" r="18" fill="#e5a026"/>
+    <circle cx="262" cy="314" r="24" fill="#b86022"/>
+    <path d="M185 288 C210 258 254 261 281 291 C245 283 215 281 185 288 Z" fill="#4f9c45"/>
+    <path d="M134 63 C117 118 119 221 136 266" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" opacity="0.56"/>
+    <path d="M327 48 C346 84 350 150 344 199" fill="none" stroke="#7b582b" stroke-width="3" opacity="0.7"/>
+  </g>
+
+  <g transform="translate(123 378)">
+    <ellipse cx="86" cy="57" rx="86" ry="25" fill="#d0b493" opacity="0.55"/>
+    <ellipse cx="82" cy="38" rx="75" ry="24" fill="#f3f7f5"/>
+    <ellipse cx="82" cy="38" rx="57" ry="16" fill="#d4e0de"/>
+    <circle cx="49" cy="27" r="20" fill="#c73522"/>
+    <circle cx="83" cy="25" r="18" fill="#e84b2d"/>
+    <circle cx="112" cy="34" r="17" fill="#b62d1b"/>
+    <path d="M40 20 C65 2 106 5 127 27" fill="none" stroke="#3d8d3c" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(812 388)">
+    <ellipse cx="98" cy="54" rx="97" ry="23" fill="#d1aa78" opacity="0.55"/>
+    <rect x="18" y="25" width="160" height="38" rx="19" fill="#d7b47e"/>
+    <ellipse cx="98" cy="25" rx="80" ry="21" fill="#eed093"/>
+    <circle cx="74" cy="18" r="28" fill="#e0a52d"/>
+    <circle cx="125" cy="19" r="31" fill="#d79020"/>
+  </g>
+
+  <g opacity="0.75">
+    <rect x="444" y="366" width="118" height="20" rx="10" fill="#cd9b62"/>
+    <ellipse cx="480" cy="363" rx="64" ry="16" fill="#e8c083"/>
+    <ellipse cx="468" cy="360" rx="52" ry="11" fill="#f5d99d"/>
+    <rect x="421" y="386" width="118" height="18" rx="9" fill="#bc7a35" transform="rotate(-7 480 395)"/>
+  </g>
+
+  <rect x="0" y="0" width="1200" height="520" fill="none" stroke="#ffffff" stroke-opacity="0.28"/>
+</svg>
