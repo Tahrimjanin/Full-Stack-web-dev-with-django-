@@ -32,158 +32,6 @@ const manufacturersPrevious = document.querySelector(".manufacturers-prev");
 const manufacturersNext = document.querySelector(".manufacturers-next");
 const newsletterForm = document.querySelector(".newsletter-form");
 
-const relatedProducts = {
-  deals: [
-    {
-      name: "Premium Steel Blender With Two Jars",
-      image: "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=500&q=80",
-      alt: "Premium blender with two jars",
-      price: "$420.00",
-      color: "#f3b34d"
-    },
-    {
-      name: "Digital Compact Microwave Oven 25L",
-      image: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=500&q=80",
-      alt: "Compact microwave oven",
-      price: "$650.00",
-      color: "#2f3745"
-    },
-    {
-      name: "Classic Ceramic Saucepan Set",
-      image: "assets/ceramic-pan-set.svg",
-      alt: "Ceramic saucepan set",
-      price: "$380.00",
-      color: "#e7b8c2"
-    }
-  ],
-  newArrivals: [
-    {
-      name: "Nonstick Kitchen Fry Pan Set",
-      image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=260&q=80",
-      alt: "Nonstick kitchen fry pan",
-      price: "$299.00"
-    },
-    {
-      name: "Modern Kitchen Storage Bundle",
-      image: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=260&q=80",
-      alt: "Modern kitchen storage",
-      price: "$820.00"
-    },
-    {
-      name: "Smart Laundry Appliance",
-      image: "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=260&q=80",
-      alt: "Smart laundry appliance",
-      price: "$940.00"
-    }
-  ],
-  customProducts: [
-    {
-      name: "Custom Ceramic Cookware Pack",
-      image: "assets/ceramic-pan-set.svg",
-      alt: "Custom ceramic cookware pack",
-      price: "$540.00"
-    },
-    {
-      name: "Home Chef Appliance Combo",
-      image: "assets/smart-home-appliances.svg",
-      alt: "Home chef appliance combo",
-      price: "$1,200.00"
-    },
-    {
-      name: "Custom TV Entertainment Set",
-      image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=260&q=80",
-      alt: "Custom TV entertainment set",
-      price: "$1,450.00"
-    }
-  ],
-  featured: [
-    {
-      name: "Samsung Smart 4K Display TV",
-      image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=520&q=80",
-      alt: "Samsung smart 4K display TV",
-      price: "$1,250.00",
-      color: "#2c3644"
-    },
-    {
-      name: "Smart Air Fryer Kitchen Appliance",
-      image: "assets/smart-home-appliances.svg",
-      alt: "Smart air fryer kitchen appliance",
-      price: "$780.00",
-      color: "#d89b31"
-    },
-    {
-      name: "Front Load Washing Machine",
-      image: "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?auto=format&fit=crop&w=520&q=80",
-      alt: "Front load washing machine",
-      price: "$1,100.00",
-      color: "#e6e8ee"
-    }
-  ],
-  smart: [
-    {
-      name: "LG OLED Smart TV 55-Inch",
-      image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=260&q=80",
-      alt: "LG OLED smart TV",
-      price: "$1,299.00"
-    },
-    {
-      name: "Sony Google TV 65-Inch",
-      image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=260&q=80",
-      alt: "Sony Google TV",
-      price: "$1,180.00"
-    },
-    {
-      name: "Ultra HD Streaming TV",
-      image: "https://images.unsplash.com/photo-1567690187548-f07b1d7bf5a9?auto=format&fit=crop&w=260&q=80",
-      alt: "Ultra HD streaming TV",
-      price: "$950.00"
-    }
-  ],
-  mixer: [
-    {
-      name: "High Speed Mixer Grinder",
-      image: "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=260&q=80",
-      alt: "High speed mixer grinder",
-      price: "$360.00"
-    },
-    {
-      name: "Kitchen Blender Combo Pack",
-      image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=260&q=80",
-      alt: "Kitchen blender combo pack",
-      price: "$490.00"
-    },
-    {
-      name: "Professional Countertop Blender",
-      image: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=260&q=80",
-      alt: "Professional countertop blender",
-      price: "$260.00"
-    }
-  ],
-  bestSale: [
-    {
-      name: "Panasonic Smart Android TV",
-      image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=520&q=80",
-      alt: "Panasonic smart Android TV",
-      price: "$899.00",
-      color: "#4b5563"
-    },
-    {
-      name: "Black Nonstick Cookware Bundle",
-      image: "assets/mint-cookware-set.svg",
-      alt: "Black nonstick cookware bundle",
-      price: "$620.00",
-      color: "#111827"
-    },
-    {
-      name: "Smart Kitchen Appliance Deal",
-      image: "assets/smart-home-appliances.svg",
-      alt: "Smart kitchen appliance deal",
-      price: "$740.00",
-      color: "#f0b429"
-    }
-  ]
-};
-
 function createProductCard(product, extraClass = "") {
   const card = document.createElement("article");
   card.className = `product-card ${extraClass}`.trim();
@@ -221,6 +69,30 @@ function createCompactProduct(product, className = "compact-product") {
   return card;
 }
 
+function createWideProduct(product, className = "wide-product") {
+  const card = document.createElement("article");
+  card.className = className;
+  card.innerHTML = `
+    <img src="${product.image}" alt="${product.alt}">
+    <div>
+      <h3>${product.name}</h3>
+      <div class="tiny-rating">&star;&star;&star;&star;&star;</div>
+      ${product.price ? `<p>${product.price}</p>` : ""}
+    </div>
+  `;
+  return card;
+}
+
+function renderDealProductsFromDatabase(products) {
+  if (!dealProducts) return;
+
+  dealProducts.innerHTML = "";
+
+  products.forEach((product) => {
+    dealProducts.appendChild(createProductCard(product));
+  });
+}
+
 function appendProducts(row, products, createCard) {
   if (!row) {
     return;
@@ -230,6 +102,8 @@ function appendProducts(row, products, createCard) {
     row.appendChild(createCard(product));
   });
 }
+
+const productDatabase = typeof pictureDatabase !== "undefined" ? pictureDatabase : window.pictureDatabase || [];
 
 function duplicateScrollableContent(row) {
   if (!row || row.children.length === 0 || row.dataset.loopReady === "true") {
@@ -247,13 +121,22 @@ function duplicateScrollableContent(row) {
   row.dataset.loopReady = "true";
 }
 
-appendProducts(dealProducts, relatedProducts.deals, (product) => createProductCard(product));
-appendProducts(document.querySelector("#new-arrivals"), relatedProducts.newArrivals, createCompactProduct);
-appendProducts(document.querySelector("#custom-products"), relatedProducts.customProducts, createCompactProduct);
-appendProducts(featuredProducts, relatedProducts.featured, (product) => createProductCard(product, "featured-product-card"));
-appendProducts(smartProducts, relatedProducts.smart, (product) => createCompactProduct(product, "wide-product"));
-appendProducts(mixerProducts, relatedProducts.mixer, (product) => createCompactProduct(product, "wide-product"));
-appendProducts(bestSaleProducts, relatedProducts.bestSale, (product) => createProductCard(product, "best-sale-card"));
+function renderProducts(row, products, createCard) {
+  if (!row) return;
+
+  row.innerHTML = "";
+  products.forEach((product) => {
+    row.appendChild(createCard(product));
+  });
+}
+
+renderProducts(dealProducts, productDatabase.slice(0, 12), createProductCard);
+renderProducts(document.querySelector("#new-arrivals"), productDatabase.slice(12, 20), createCompactProduct);
+renderProducts(document.querySelector("#custom-products"), productDatabase.slice(20, 24), createCompactProduct);
+renderProducts(featuredProducts, productDatabase.slice(24, 30), (product) => createProductCard(product, "featured-product-card"));
+renderProducts(smartProducts, productDatabase.slice(30, 34), createWideProduct);
+renderProducts(mixerProducts, productDatabase.slice(34, 38), createWideProduct);
+renderProducts(bestSaleProducts, productDatabase.slice(38, 44), (product) => createProductCard(product, "best-sale-card"));
 
 function applyProductImageFallbacks() {
   document.querySelectorAll(".product-card img, .compact-product img, .wide-product img, .category-photo").forEach((image) => {

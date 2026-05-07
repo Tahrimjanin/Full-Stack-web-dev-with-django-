@@ -1,0 +1,60 @@
+1. What is OOP
+    - Reusable
+    - Real-World
+    - Extensibility
+    - APIs
+    - Web service
+    - Testing
+    - Django,DRF (OOP)
+    - Package Develop
+    - Programming Habit 60-70%
+
+    - Functional Programming  40-30%
+    - Fast API (Functional Programming)
+    - Data Science (Functional Programming)
+    - Web Automation (Functional Programming)
+    - Web Scrapping (Functional Programming)
+    - Cyber Security (Functional Programming)
+
+
+2. OOP Features
+    - Class
+    - Object
+    - Attributes
+    - Constructor
+    - Inheritance
+    - Encapsulation
+    - Polymorphism
+
+3. Creating Classes and Objects
+    - What is Class (Blue Print)
+    - How to Create Class (class)
+    - Class Variable
+    - Class Method
+    - Class Variable, Method (Class Properties)
+    - Class-> Objects
+    - Object--> Class Properties
+
+
+4. Class Constructor
+    - Auto Executed Method (__init__)
+    - Auto Execution
+    - DemoClass---> () [Constructor]
+    - Using Constructor
+        - Class Variable Value Change
+        - Inside Class We Can Create New Variable
+
+
+5. Instance Variable
+6. Instance Method (__init__)
+
+7. Class Pass
+
+
+8. Make A Fast API-
+    - pip install fastapi uvicorn
+    - uvicorn main:app --reload
+    - http://127.0.0.1:8000/docs (Swagger API Doc Interface)
+
+
+9. Python , Automation, Scrapping, Data Science, AI/ML --> Fast API / Django

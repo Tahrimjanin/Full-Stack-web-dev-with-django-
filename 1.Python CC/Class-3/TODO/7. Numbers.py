@@ -1,0 +1,10 @@
+a=10
+b=20
+c=3.1614
+print(a+b+c)
+print(a-b)
+print(a*b)
+print(a/b)
+print(a//b)
+print(a%b)
+print(a**b)

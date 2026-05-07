@@ -1,0 +1,68 @@
+1. What is Data Type
+    - Numeric Types
+        a) int (35)
+        b) float (299.999)
+        c) complex (1+2j)
+
+    - String Type
+        a) single quote string
+        b) double quote string
+        c) triple single quote string
+        d) triple double quote string
+
+    - Sequence Types
+        a) list []
+            - list has index number
+            - ordered data
+            - can contain multiple types
+        b) tuple ()
+            - has index number
+            - ordered data
+            - can contain multiple types
+        c) range()
+            - data generate
+
+      -Mapping Data Type
+        a) Dictionary {} / JSON OBJECT / [Dictionary,Dictionary,Dictionary]=>JSON Array
+        b) Set {}
+            - No Key:Value Pair
+            - No Index Number
+            - Unordered Data
+            - Unique Item
+         c) frozenset
+            - No Key:Value Pair
+            - No Index Number
+            - Unordered Data
+            - Unique Item
+
+       - Boolean Data Type
+            - True
+            - False
+
+       - None Data Type
+            - None
+
+
+2. Data Type Checking
+
+
+3. Mutable And Immutable Data Types
+    Immutable: Memory Location changed when value changed
+    Mutable: Memory Location  not changed 
+
+4. Immutable
+    - int
+    - float
+    - string
+    - tuple
+    - frozenset
+
+
+5. Mutable
+    -List
+    -Dict
+    -Set
+
+
+6. Most Used Data Type 
+    - int,float,double quote,list,Dictionary,Boolean,None

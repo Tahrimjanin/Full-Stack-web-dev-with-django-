@@ -1,0 +1,19 @@
+Class 04: Control Flow and Looping Constructs
+
+1. Control Flow
+    - If Statements
+    - else Statements
+    - else if Statements - else if ladder
+    - Use Case
+        - Login, Registration, Forgot password, Form Valdiation
+        - Payment Processing
+        - Inventory
+        - Discount -Flat - %
+
+2. Loop
+- for Loop
+- for Loop break,continue
+- while Loop, break,continue
+
+3. Loop over Dict
+4.

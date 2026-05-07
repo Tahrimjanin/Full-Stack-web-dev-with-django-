@@ -1,0 +1,29 @@
+# Working With JSON
+    1. Python Dict---> JSON
+    2. JSON String---> Dict
+    3. Python Dict---> JSON File
+    4. JSON File-----> Python Dict
+
+
+
+# Call HTTP API/URL Using Python
+- Use Case: Automation,Scrapping, 3rd part API Call, B2B
+- https://pypi.org/project/requests/
+- https://crud.teamrabbil.com/
+- (GET Request) https://crud.teamrabbil.com/api/v1/ReadProduct
+- (Post Request) https://crud.teamrabbil.com/api/v1/CreateProduct
+  {"ProductName":"A","ProductCode":"A","Img":"A","UnitPrice":"A","Qty":"A","TotalPrice":"A"}
+
+
+
+# Python Date & Times
+    - datetime,date,time,timedelta
+    - Current Date Time
+    - Only Date or Time
+    - Data Formating
+    - Date Time Delta
+    - Date Time Diff
+    - Date Time AM PM
+
+
+https://www.youtube.com/watch?v=NsZ0MlZv91g

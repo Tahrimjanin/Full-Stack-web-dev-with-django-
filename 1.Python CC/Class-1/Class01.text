@@ -1,0 +1,71 @@
+1. Overview of Python
+-  High Level programming language, simplicity, readability
+-  Guido van Rossum and first released in 1991
+-  Python 3~ -> 2008->2025
+-  Interpreted programming language
+
+2.  Why Learn Python?
+- Simplicity
+- Versatility web development, data analysis, AI-ML
+- Large Community
+- Career Opportunities
+
+
+3. Real-world Applications
+   -  Web Development
+   -  Data Science and Machine Learning
+   -  Automation and Scripting
+
+4. Installing Python-https://www.python.org/
+    - Install Check  Powershell,Command prompt,Terminal
+    - python --version, python3 --version
+
+5. Code Editor 
+    -  (IDE) PyCharm Community  (Free)
+    -  (Code Editor) VS Code
+
+6. Create a new python project 
+    -  .venv
+    - main.py
+    - hello world
+    - python main.py
+    - run button click 
+
+7. How Python Execute Codes 
+    - Debugging 
+    - আপনি কোড ভালো বুঝবেন , লাইন বাই লাইন 
+    - কোড লিখতে অনেক সময় ভুল হয় , ভুল সমাধান 
+    - Debuggin Mode Run 
+    - Stop Debuggin Process
+    - Restart/Re-run Debuggin Process
+    - Step Into-> Step Out (এখন বুঝতে পারবো পারবো না)
+    - View Break Point 
+    - Mute Brek Point
+    - Thread & Variables
+    - Console
+    - Evaluation  
+
+
+Learners TODO 
+1. Live Class Recording Watch Again 
+2. Similar Pre-Recorded Video Watch 
+3. Overall Topic Practice 
+4. Similar Note On PDF
+5. Note Down Your Practice (Notion)(gitbook)
+
+
+Live Class: 
+Duration 2:30 Hours 
+1st Part: 1:30 Hours (Study)-> Question Chat Box-> Note
+2nd Part: 1 Hours (Duel Question Answare)
+
+
+
+HTML - 15 
+CSS - 30 
+Twailding CSS - 30 
+JS - 30 
+
+
+Python 
+

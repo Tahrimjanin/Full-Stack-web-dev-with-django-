@@ -1,0 +1,26 @@
+1. How to Define and Call Function
+2. Why Function
+    - Code Reusability
+    - Function == Action
+    - Modular Programming
+    - Processing Steps
+    - Testing, Validation, Error Manage
+
+3. Function with Parameters (Structure)
+
+4. Function with default Parameters (Semi Structure)
+
+5. Function with Variable-Length Parameters (Un Structure)
+
+6. Returning a Single Value
+    একটা ফাংশন যাহা রিটার্ন করে গুনে(Data Type) ও মানে(Value) উহা তাহার সমান হয়ে যায় ।
+7. Returning a Multiple Value
+
+8. Returning Nothing
+
+9. Short hand function or lamda function or inline function
+
+10. Function (Variable Local & Global)
+
+11. Function pass
+

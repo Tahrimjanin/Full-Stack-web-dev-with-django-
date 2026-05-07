@@ -1,0 +1,77 @@
+Data Structures
+
+Details on Python List []
+    - List has index number
+    - List Dynamic Data Variable
+    - Ordered Data Type
+    - Use Case - Rest API - Request,Response,
+    - Mutable Data Type
+    - *** Add Single Item at last of List--->  append()
+    - Multiple List Combine --->  extend()
+    - Add Item in Specific Location --> insert()
+    - Remove Single Item ---> remove()
+    - Remove From Last Item --> pop()
+    - Make Empty --> clear()
+    - Specific Item Index --> index()
+    - Same Item Count ----> count()
+    - List Sorting ---> sort()--->reverse()
+    - List Length count
+    - List Slicing
+    - User Data , Inventory,Customer , Add to Cart
+
+
+Details on Python Tuple ()
+    - Tuple has index number
+    - Tuple Dynamic Data Variable
+    - Ordered Data Type
+    - Use Case - Rest API - Request,Response,
+    - Immutable Data Type
+    - (X) Add Single Item at last of Tuple--->  append()
+    - (X) Multiple Tuple Combine --->  extend()
+    - (X) Add Item in Specific Location --> insert()
+    - (X) Remove Single Item ---> remove()
+    - (X) Remove From Last Item --> pop()
+    - (X) Make Empty --> clear()
+    - Specific Item Index --> index()
+    - Same Item Count ----> count()
+    - (X) Tuple Sorting ---> sort()--->reverse()
+    - Tuple Length count
+    - Tuple Slicing
+    - (X) User Data , Inventory,Customer , Add to Cart
+
+
+
+Details on Python Set {}
+    - Set has no index number
+    - Set is not fully Dynamic Data Variable
+    - unordered Data Type
+    - Rear Use Case - Rest API - Request,Response,
+    - Mutable Data Type
+    - *** Add Single Item at Set--->  add()
+    - (X) Multiple Set Combine --->  extend()
+    - (X) Add Item in Specific Location --> insert()
+    - Remove Single Item ---> remove()
+    - (X) Remove From Last Item --> pop()
+    - Make Empty --> clear()
+    - (X) Specific Item Index --> index()
+    - (X) Same Item Count ----> count()
+    - (X) Set Sorting ---> sort()--->reverse()
+    - Set Length count
+    - (X) Set Slicing
+    - (X) User Data , Inventory,Customer , Add to Cart
+
+
+Details on Dictionary
+    - Represent an Object
+    - KEY:VALUE-> "type":"Online",
+    - course.keys()
+    - course.values()
+    - specific update course.update({"batch":14})
+    - print(course.pop("students"))
+    - clear()
+    - JSON
+
+Why JSON Important
+    - JavaScript Object Notation
+    - lightweight data-interchange format
+    - human-readable data interchange

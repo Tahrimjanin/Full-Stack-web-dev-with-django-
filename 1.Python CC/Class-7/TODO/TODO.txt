@@ -1,0 +1,54 @@
+Error Handling
+1. Error Handling ?
+    - User Input Validation
+    - File Operations
+    - Network Communication
+    - API Interactions
+    - Database Access
+    - Data Parsing
+
+2. Try-Except
+3. Try-Except-Finally
+
+
+File Handling
+1. Why File Handling
+    - File Upload,Download, Delete, Create Management
+    - CSV File Processing
+    - Log File
+    - Compress, Decompression, Storage, Binary Large Object
+
+2. File
+    - File Create
+    - File Read
+    - File Delete
+    - File Rename
+    - Folder Create
+    - Folder Delete
+    - Folder Rename
+    -
+
+3. Face Analysis
+    - DeepFace
+    - pip install deepface
+    - pip install tf-keras
+
+
+4. How to freeze and Re-Install Packages
+    - python3.12 -m venv venv
+    - source venv/bin/activate
+    - pip freeze > requirements.txt
+    - pip install -r requirements.txt
+
+
+Server PC - $12
+Hugging Face- $10
+==================
+$22x122.2= 2684 BDT
+==================
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+Target: Image Background  Remover
+1. Package
+    - pillow
+    - rembg
+2. pip install pillow
+3. pip install rembg
+4. Image Open--> BG Remove ---> Save Image
+5. pip install onnxruntime
+==================================
+pip freeze > requirements.txt
+==================================
+#create venv
+python -m venv .venv
+==================================
+pip install -r requirements.txt

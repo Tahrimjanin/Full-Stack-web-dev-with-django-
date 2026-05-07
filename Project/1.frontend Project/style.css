@@ -1060,7 +1060,8 @@ select {
   width: 100%;
   height: 176px;
   object-fit: contain;
-  mix-blend-mode: multiply;
+  background: #f6f7fb;
+  border-radius: 1rem;
 }
 
 .product-card h3 {
@@ -2934,4 +2935,60 @@ img {
   .product-tabs {
     flex-wrap: wrap;
   }
+}
+
+.picture-database-section {
+  padding: 3rem 1.5rem;
+  background: #fafafb;
+}
+
+.picture-database-section .section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.picture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.picture-card {
+  background: #ffffff;
+  border: 1px solid rgba(115, 114, 116, 0.12);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 24px 54px rgba(69, 74, 86, 0.08);
+}
+
+.picture-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.picture-card-content {
+  padding: 1rem;
+}
+
+.picture-card-content h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.picture-card-content p {
+  margin: 0.5rem 0 0;
+  color: #5d6479;
+  font-size: 0.95rem;
+}
+
+.picture-card-category {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: #8d94a5;
+  font-size: 0.85rem;
 }

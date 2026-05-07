@@ -1,0 +1,83 @@
+1. Introduction of OOP
+2. Details On Class
+3. Details On Object
+4. Details On Constructor
+5. Class Variable
+6. Class Method
+7. Instance Variable
+---------------------
+
+8. Inheritance (উত্তররাধিকার)
+    - Father(Parent) Class
+    - Son (Child) Class
+
+9. Multiple Inheritance
+    - Father(Parent) Class
+    - Mother(Parent) Class
+    - Son (Child) Class
+
+10. Multilevel Inheritance
+    - Father(Parent) Class
+    - Mother(Parent,Child) Class
+    - Son (Child) Class
+
+11. Why Inheritance
+    - Django Framework , Fast API
+
+12. Inheritance
+        - Method Overriding (Only Function Name Matching)
+
+
+13. Method overloading
+        - Python Has No Scope
+
+14. Polymorphism
+        - Inheritance
+        - Multiple Inheritance
+        - Multilevel Inheritance
+        - Method Overriding
+        - Method overloading(X)
+
+
+15. Abstract Class In OOP (ABC)
+        - Looks Like OOP Interface
+
+16. Encapsulation in python
+        - class Bank Account
+        - balance=0
+        - deposit=500
+        - balance=0+500=500
+        - withdraw=300
+        - balance=500-300=200
+        - check balance=200
+
+17. Access Modifier
+        - Private (Only Inside Parent And Child Class __)
+        - Public (Anywhere)
+        - Protected (Only Inside Parent And Child Class _ )
+
+18. Getter Setter
+        - Create Variable
+        - Set Variable Value
+        - Get Variable Value
+
+
+20. Topics Always Works
+*** Details On Class
+*** Details On Object
+*** Details On Constructor
+*** Class Variable
+*** Class Method
+*** Instance Variable
+*** Inheritance
+*** Method Overriding
+** Access Modifier
+* Multiple Inheritance
+* Multilevel Inheritance
+* Getter Setter
+* Encapsulation
+* Abstract
+* Method Overloading
+
+
+

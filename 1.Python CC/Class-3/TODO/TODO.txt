@@ -1,0 +1,61 @@
+1. Strings
+    - single quotes ''
+    - double quotes ""
+    - triple single quotes '''''
+    - triple double quotes """ """
+
+2. single quotes
+    - string literals
+    - string itself contains double quotes
+    - Best for short strings
+
+3. double quotes
+    - string literals
+    - string itself contains single quotes
+    - best for short strings
+
+4. triple single quotes
+    - multi-line strings, docstrings
+    - multi-line
+    - string itself contains double quotes
+    - Best for long string
+
+5.  triple double quotes
+    - multi-line strings, docstrings
+    - multi-line
+    - string itself contains single quotes
+    - Best for long string
+
+
+6. String Indexing
+    - Positive Indexing
+    - Negative Indexing
+
+7.  String Slicing
+
+8. String Concatenation
+    -  +
+    - f
+
+9. String Repetition
+
+10. String Methods
+
+11. String Methods Use Case
+    - Data Cleaning
+    - Text Data Analysis
+    - User Input Output
+    - User Show
+
+12. Numbers
+
+13. Type Conversion
+
+14. Math
+
+15. Practical Use Case
+    - Financial
+    - Data Analysis
+    - Graphics, Game
+    - Scientific
+    - Engineering
