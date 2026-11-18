@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Khwaja Yunus Ali University</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#registration">Registration</a></li>
+        <li><a href="#records">Submitted Records</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="registration" class="card">
+      <h2>Student Registration</h2>
+
+      <form id="regForm" novalidate>
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter full name">
+            <span class="error" id="fullNameError" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com">
+            <span class="error" id="emailError" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX">
+            <span class="error" id="phoneError" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+            <span class="error" id="dobError" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department" name="department">
+              <option value="">-- Select Department --</option>
+              <option value="CSE">Computer Science &amp; Engineering</option>
+              <option value="EEE">Electrical &amp; Electronic Engineering</option>
+              <option value="BBA">Business Administration</option>
+              <option value="English">English</option>
+              <option value="Law">Law</option>
+            </select>
+            <span class="error" id="departmentError" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="At least 8 characters">
+            <span class="error" id="passwordError" role="alert"></span>
+          </div>
+
+          <fieldset class="form-group full-width">
+            <legend>Gender</legend>
+            <div class="radio-row">
+              <label class="radio-label"><input type="radio" name="gender" value="Male"> Male</label>
+              <label class="radio-label"><input type="radio" name="gender" value="Female"> Female</label>
+              <label class="radio-label"><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+            <span class="error" id="genderError" role="alert"></span>
+          </fieldset>
+
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn primary">Register</button>
+          <button type="reset" class="btn secondary" id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="records" class="card" hidden>
+      <h2>Submitted Data</h2>
+      <div class="table-wrap">
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>#</th><th>Full Name</th><th>Email</th><th>Phone</th>
+              <th>Date of Birth</th><th>Department</th><th>Gender</th><th>Password</th>
+            </tr>
+          </thead>
+          <tbody id="dataBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Khwaja Yunus Ali University | Web Engineering Lab (CSE 0613-3208)</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
